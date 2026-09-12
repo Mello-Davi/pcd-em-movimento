@@ -1,17 +1,105 @@
-@reference "../../../app.css";
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
-.container { @apply container mx-auto px-4; }
-.grid { @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
 
-.content { @apply flex flex-col gap-8; }
-.title { @apply font-serif text-3xl md:text-4xl font-bold text-brand-dark; }
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
 
-.list { @apply flex flex-col gap-5; }
-.listItem { @apply flex items-start gap-4 text-gray-700 font-medium; }
-.icon { @apply text-brand-green shrink-0 mt-0.5; }
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-.imageContainer { @apply relative rounded-3xl overflow-hidden shadow-2xl h-80 lg:h-[500px]; }
-.image { @apply w-full h-full object-cover; }
-.imageOverlay { @apply absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-8 pt-20; }
-.quote { @apply font-serif text-2xl font-bold text-white mb-2; }
-.quoteAuthor { @apply text-gray-300 text-sm; }
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .title { font-size: 2.25rem; }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.icon {
+  color: var(--color-brand-green);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  height: 20rem;
+}
+
+@media (min-width: 1024px) {
+  .imageContainer { height: 31.25rem; }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem;
+  padding-top: 5rem;
+}
+
+.quote {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.quoteAuthor {
+  color: #d1d5db;
+  font-size: 0.875rem;
+  margin: 0;
+}

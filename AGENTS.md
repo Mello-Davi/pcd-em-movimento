@@ -27,13 +27,18 @@ NomeDoComponente/
  └── styles.module.css      # As definições de estilo do componente
 ```
 - **NUNCA** use strings gigantes utilitárias do Tailwind dentro do arquivo `.tsx`. O `className` deve ser semântico (ex: `className={styles.sidebar}`).
-- **Obrigatório no CSS Module**: Todo arquivo `styles.module.css` DEVE iniciar com a diretiva `@reference "tailwindcss";` no topo, para que o Tailwind CSS v4 consiga processar o `@apply` corretamente no Vite.
+- **Obrigatório no CSS Module**: Todo arquivo `styles.module.css` DEVE ser escrito utilizando CSS puro (Vanilla CSS), sem o uso de diretivas do Tailwind como `@apply`. O código deve ser descritivo, de fácil manutenção e legível para qualquer desenvolvedor.
 
-Exemplo de CSS Module:
+Exemplo de CSS Module esperado:
 ```css
-@reference "tailwindcss";
 .card {
-  @apply bg-white p-8 rounded-2xl shadow-xl;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 ```
 

@@ -1,29 +1,69 @@
-@reference "../../../app.css";
-
 .button {
-  @apply font-semibold py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 flex items-center justify-center gap-2;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-brand-light), 0 0 0 4px var(--color-brand-green);
 }
 
 .primary {
-  @apply bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.primary:hover {
+  background-color: #1d4ed8;
 }
 
 .secondary {
-  @apply bg-white text-brand-dark hover:bg-gray-100 focus:ring-white;
+  background-color: #ffffff;
+  color: var(--color-brand-dark);
+}
+
+.secondary:hover {
+  background-color: #f3f4f6;
 }
 
 .success {
-  @apply bg-brand-green hover:bg-green-600 text-white focus:ring-brand-green;
+  background-color: var(--color-brand-green);
+  color: #ffffff;
+}
+
+.success:hover {
+  background-color: #22c55e;
 }
 
 .outline {
-  @apply border-2 border-white text-white hover:bg-white hover:text-brand-dark focus:ring-white;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.outline:hover {
+  background-color: #ffffff;
+  color: var(--color-brand-dark);
 }
 
 .white {
-  @apply bg-white text-blue-600 hover:bg-gray-100 focus:ring-white;
+  background-color: #ffffff;
+  color: #2563eb;
+}
+
+.white:hover {
+  background-color: #f3f4f6;
 }
 
 .fullWidth {
-  @apply w-full;
+  width: 100%;
 }

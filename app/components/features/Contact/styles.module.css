@@ -1,26 +1,182 @@
-@reference "../../../app.css";
+.sectionWithWave {
+  position: relative;
+  padding-bottom: 10rem;
+}
 
-.sectionWithWave { @apply relative pb-40; }
-.container { @apply container mx-auto px-4 relative z-10; }
-.grid { @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start; }
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
 
-.infoColumn { @apply flex flex-col items-start; }
-.tag { @apply bg-green-100 text-green-800 font-bold text-sm tracking-wider uppercase px-4 py-1.5 rounded-full mb-6; }
-.title { @apply font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-6; }
-.description { @apply text-gray-700 leading-relaxed mb-10; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
 
-.whatsappBtn { @apply inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-8 rounded-xl transition-colors mb-12 shadow-lg shadow-green-200; }
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+}
 
-.contactList { @apply flex flex-col gap-6; }
-.contactItem { @apply flex items-center gap-4 text-gray-700 font-medium; }
-.iconBox { @apply bg-blue-100 p-3 rounded-xl shrink-0; }
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-.formContainer { @apply bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 w-full; }
-.formTitle { @apply font-serif text-2xl font-bold text-brand-dark mb-8; }
-.form { @apply flex flex-col gap-6; }
-.formGroup { @apply flex flex-col gap-2; }
-.label { @apply font-bold text-sm text-brand-dark; }
-.input { @apply border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors w-full; }
-.textarea { @apply border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors w-full resize-none; }
+.tag {
+  background-color: #dcfce7;
+  color: #166534;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
 
-.waveDivider { @apply absolute bottom-0 left-0 w-full h-16 md:h-24 lg:h-32 z-0 overflow-hidden; }
+.title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title { font-size: 3rem; }
+}
+
+.description {
+  color: #374151;
+  line-height: 1.625;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 15px -3px rgba(187, 247, 208, 1);
+  text-decoration: none;
+}
+
+.whatsappBtn:hover {
+  background-color: #20bd5a;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.iconBox {
+  background-color: #dbeafe;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+}
+
+.formContainer {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f4f6;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .formContainer { padding: 3rem; }
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-brand-dark);
+}
+
+.input, .textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.textarea {
+  resize: none;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.waveDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .waveDivider { height: 6rem; }
+}
+
+@media (min-width: 1024px) {
+  .waveDivider { height: 8rem; }
+}
