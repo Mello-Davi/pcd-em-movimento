@@ -1,10 +1,10 @@
 import type { Route } from "./+types/home";
-import { Hero } from "../presentation/components/features/Hero";
-import { About } from "../presentation/components/features/About";
-import { Project } from "../presentation/components/features/Project";
-import { Location } from "../presentation/components/features/Location";
-import { Testimonials } from "../presentation/components/features/Testimonials";
-import { Contact } from "../presentation/components/features/Contact";
+import { Hero } from "../components/features/Hero";
+import { About } from "../components/features/About";
+import { Project } from "../components/features/Project";
+import { Location } from "../components/features/Location";
+import { Testimonials } from "../components/features/Testimonials";
+import { Contact } from "../components/features/Contact";
 
 export function meta({}: Route.MetaArgs) {
   return [

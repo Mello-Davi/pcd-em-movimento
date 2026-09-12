@@ -3,9 +3,9 @@ import { Send, MessageCircle } from "lucide-react";
 import { Button } from "../../ui/Button";
 import { Section } from "../../ui/Section";
 import { SectionTitle } from "../../ui/SectionTitle";
-import { SendContactMessageUseCase } from "../../../../core/application/use-cases/SendContactMessageUseCase";
-import { MockContactRepository } from "../../../../infrastructure/repositories/MockContactRepository";
-import type { ContactMessage } from "../../../../core/domain/entities/ContactMessage";
+import { SendContactMessageUseCase } from "../../../core/application/use-cases/SendContactMessageUseCase";
+import { MockContactRepository } from "../../../infrastructure/repositories/MockContactRepository";
+import type { ContactMessage } from "../../../core/domain/entities/ContactMessage";
 import styles from "./styles.module.css";
 
 const contactRepository = new MockContactRepository();

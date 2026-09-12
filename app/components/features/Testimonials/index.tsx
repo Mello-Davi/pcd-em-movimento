@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Quote } from "lucide-react";
 import { Section } from "../../ui/Section";
 import { SectionTitle } from "../../ui/SectionTitle";
-import { StaticTestimonialRepository } from "../../../../infrastructure/repositories/StaticTestimonialRepository";
-import type { Testimonial } from "../../../../core/domain/entities/Testimonial";
+import { StaticTestimonialRepository } from "../../../infrastructure/repositories/StaticTestimonialRepository";
+import type { Testimonial } from "../../../core/domain/entities/Testimonial";
 import styles from "./styles.module.css";
 
 const testimonialRepository = new StaticTestimonialRepository();
