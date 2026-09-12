@@ -3,15 +3,20 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import styles from "./styles.module.css";
 import { Button } from "../../ui/Button";
 import { useId } from "react";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 export function Contact() {
   const nameId = useId();
   const emailId = useId();
   const messageId = useId();
+  const { ref, isVisible } = useScrollReveal();
 
   return (
-    <Section id="contato" theme="light" className={styles.sectionWithWave}>
-      <div className={styles.container}>
+    <Section id="contato" theme="light" className={styles.sectionWithWave} animated={false}>
+      <div 
+        ref={ref as React.RefObject<HTMLDivElement>} 
+        className={`${styles.container} reveal ${isVisible ? "visible" : ""}`}
+      >
         <div className={styles.grid}>
           <div className={styles.infoColumn}>
             <span className={styles.tag} aria-hidden="true">Contato</span>
@@ -63,7 +68,7 @@ export function Contact() {
       </div>
       
       <div className={styles.waveDivider} aria-hidden="true">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-full">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style={{ width: "100%", height: "100%" }}>
           <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#122132" />
         </svg>
       </div>
