@@ -34,7 +34,7 @@ export function Hero() {
           </h1>
           
           <p className={styles.subtitle}>
-            A PCD em Movimento leva pessoas com deficiência ao oceano através da canoa havaiana adaptada — promovendo inclusão, saúde e conexão humana.
+            O PCD em Movimento leva pessoas com deficiência ao oceano através da canoa havaiana adaptada, promovendo inclusão, saúde e conexão humana.
           </p>
           
           <div className={styles.actions}>
@@ -53,7 +53,7 @@ export function Hero() {
             <span className={styles.statLabel}>Participantes atendidos</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>5 anos</span>
+            <span className={styles.statNumber}>4 anos</span>
             <span className={styles.statLabel}>Transformando vidas</span>
           </div>
           <div className={styles.statItem}>

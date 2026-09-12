@@ -165,12 +165,19 @@
 
 .waveDivider {
   position: absolute;
-  bottom: 0;
+  bottom: -2px; /* Fix subpixel rendering gap */
   left: 0;
   width: 100%;
   height: 4rem;
   z-index: 0;
   overflow: hidden;
+  line-height: 0;
+}
+
+.waveDivider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
