@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router";
 import styles from "./styles.module.css";
+import logoImg from "../../../assets/logo.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logoLink} aria-label="Página inicial do PCD em Movimento">
-          <div className={styles.logoIcon}>P</div>
-          <span className={styles.logoText}>PCD em Movimento</span>
+          <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-12 w-auto" />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Navegação principal">

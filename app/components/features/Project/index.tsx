@@ -2,6 +2,7 @@ import { Activity, Anchor, Sun } from "lucide-react";
 import { Section } from "../../ui/Section";
 import { SectionTitle } from "../../ui/SectionTitle";
 import styles from "./styles.module.css";
+import canoaImg from "../../../assets/canoaHavaianaMarAberto.png";
 
 export function Project() {
   return (
@@ -48,7 +49,7 @@ export function Project() {
         
         <div className={styles.imageGrid}>
           <img 
-            src="https://images.unsplash.com/photo-1596489370217-1033b006c9bc?q=80&w=1000&auto=format&fit=crop" 
+            src={canoaImg} 
             alt="Canoa havaiana no mar aberto" 
             className={styles.imageLeft}
           />

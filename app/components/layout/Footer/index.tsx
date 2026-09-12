@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router";
 import styles from "./styles.module.css";
+import logoImg from "../../../assets/logo.png";
 
 export function Footer() {
   return (
@@ -9,8 +10,7 @@ export function Footer() {
         <div className={styles.grid}>
           <div className={styles.column}>
             <Link to="/" className={styles.logoLink}>
-              <div className={styles.logoIcon}>P</div>
-              <span className={styles.logoText}>PCD em Movimento</span>
+              <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-12 w-auto" />
             </Link>
             <p className={styles.description}>
               Promovendo inclusão, mobilidade e integração social de pessoas com deficiência através da prática de canoa havaiana.

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../../ui/Button";
 import styles from "./styles.module.css";
+import heroImg from "../../../assets/canoaHavaianaMarAberto.png";
 
 export function Hero() {
   return (
@@ -8,7 +9,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className={styles.backgroundOverlay} />
         <img
-          src="https://images.unsplash.com/photo-1544079867-b50a0063d810?q=80&w=2070&auto=format&fit=crop"
+          src={heroImg}
           alt="Pessoas praticando canoa havaiana no mar ao entardecer"
           className={styles.backgroundImage}
         />
