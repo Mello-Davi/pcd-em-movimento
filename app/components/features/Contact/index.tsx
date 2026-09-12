@@ -41,7 +41,7 @@ export function Contact() {
               </div>
               <div className={styles.channelItem}>
                 <div className={styles.channelIcon} aria-hidden="true"><MapPin aria-hidden="true" size={20} className="text-brand-dark" /></div>
-                <span>São Paulo — SP, Brasil</span>
+                <span>Niterói — RJ, Brasil</span>
               </div>
             </div>
           </div>

@@ -23,7 +23,7 @@ export function About() {
             
             <div className={styles.prose}>
               <p>
-                A <strong>PCD em Movimento</strong> é uma organização sem fins lucrativos fundada em 2019 em São Paulo, dedicada à inclusão social de pessoas com deficiência por meio do esporte adaptado.
+                A <strong>PCD em Movimento</strong> é uma organização sem fins lucrativos fundada em 2019 em Niterói, dedicada à inclusão social de pessoas com deficiência por meio do esporte adaptado.
               </p>
               <p>
                 Nossa prática central — a canoa havaiana adaptada — une saúde física, saúde mental, socialização e contato com a natureza em uma experiência transformadora. Acreditamos que o mar não tem barreiras, e ninguém deveria ter.

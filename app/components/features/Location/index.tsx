@@ -27,7 +27,7 @@ export function Location() {
                   <p className={`${styles.scheduleTime} ${styles.timeSunday}`}>08:00 – 11:00h</p>
                   <p className={styles.scheduleAddress}>
                     <MapPin aria-hidden="true" size={16} className="inline mr-1" />
-                    Praia Grande – SP (1º domingo do mês)
+                    Praia de Charitas, Niterói – RJ (Quiosque 19 - Point do Remador)
                   </p>
                 </div>
               </div>
@@ -39,11 +39,16 @@ export function Location() {
           </div>
 
           <div className={styles.mapContainer}>
-            <div className={styles.mapOverlay}>
-              <h3 className={styles.mapTitle}>Represa de Guarapiranga</h3>
-              <p className={styles.mapSubtitle}>São Paulo – SP</p>
-              <a href="#" className={styles.mapLink}>Ver no Google Maps</a>
-            </div>
+            <iframe 
+              src="https://maps.google.com/maps?q=Praia%20de%20Charitas,%20Niter%C3%B3i,%20quiosque%2019%20Point%20do%20Remador&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Mapa para Praia de Charitas, Quiosque 19 - Point do Remador"
+            ></iframe>
           </div>
         </div>
       </div>
