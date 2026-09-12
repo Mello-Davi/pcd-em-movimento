@@ -1,7 +1,7 @@
 import { Section } from "../../ui/Section";
 import { CheckCircle2 } from "lucide-react";
 import styles from "./styles.module.css";
-import { Button } from "../../ui/Button";
+import { LinkButton } from "../../ui/Button";
 
 export function Participate() {
   return (
@@ -29,7 +29,7 @@ export function Participate() {
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Sem experiência prévia</li>
             </ul>
             <div className="mt-auto pt-8">
-              <Button variant="outline" fullWidth>Quero Participar</Button>
+              <LinkButton href="/#contato" variant="outline" fullWidth>Quero Participar</LinkButton>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export function Participate() {
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Comunidade incrível</li>
             </ul>
             <div className="mt-auto pt-8">
-              <Button variant="outline" fullWidth>Ser Voluntário</Button>
+              <LinkButton href="/#contato" variant="outline" fullWidth>Ser Voluntário</LinkButton>
             </div>
           </div>
 
@@ -67,7 +67,7 @@ export function Participate() {
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Dedução fiscal (MEI/PJ)</li>
             </ul>
             <div className="mt-auto pt-8">
-              <Button variant="outline" fullWidth>Apoiar o Projeto</Button>
+              <LinkButton href="/#contato" variant="outline" fullWidth>Apoiar o Projeto</LinkButton>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../ui/Button";
+import { LinkButton } from "../../ui/Button";
 import styles from "./styles.module.css";
 import heroImg from "../../../assets/canoaHavaianaMarAberto.png";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
@@ -9,10 +9,10 @@ export function Hero() {
 
   return (
     <section id="inicio" className={styles.section} aria-label="Início">
-      <div className={styles.backgroundWrapper} aria-hidden="true">
+      <div className={styles.backgroundWrapper}>
         <img
           src={heroImg}
-          alt=""
+          alt="Grupo de pessoas sorrindo e praticando canoa havaiana adaptada no mar aberto ao entardecer"
           className={styles.backgroundImage}
         />
         <div className={styles.backgroundOverlay} />
@@ -38,12 +38,12 @@ export function Hero() {
           </p>
           
           <div className={styles.actions}>
-            <a href="/#projeto" className={styles.linkWrapper} aria-label="Role a página para conhecer o projeto">
-              <Button variant="secondary" fullWidth>Conheça o Projeto</Button>
-            </a>
-            <a href="/#seja-voluntario" className={styles.linkWrapper} aria-label="Role a página para se inscrever como voluntário">
-              <Button variant="success" fullWidth>Seja Voluntário</Button>
-            </a>
+            <div className={styles.linkWrapper}>
+              <LinkButton href="/#projeto" variant="secondary" fullWidth aria-label="Role a página para conhecer o projeto">Conheça o Projeto</LinkButton>
+            </div>
+            <div className={styles.linkWrapper}>
+              <LinkButton href="/#seja-voluntario" variant="success" fullWidth aria-label="Role a página para se inscrever como voluntário">Seja Voluntário</LinkButton>
+            </div>
           </div>
         </div>
 

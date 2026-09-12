@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import styles from "./styles.module.css";
 import logoImg from "../../../assets/logo.png";
-import { Button } from "../../ui/Button";
+import { LinkButton } from "../../ui/Button";
 
 export function Footer() {
   return (
@@ -39,9 +39,7 @@ export function Footer() {
           <div className={styles.ctaCol}>
             <h4 className={styles.colTitle}>Participe</h4>
             <p className={styles.ctaText}>Junte-se a nós e faça parte de uma comunidade que transforma vidas.</p>
-            <a href="/#seja-voluntario">
-              <Button variant="success" fullWidth>Seja Voluntário</Button>
-            </a>
+            <LinkButton href="/#seja-voluntario" variant="success" fullWidth>Seja Voluntário</LinkButton>
           </div>
         </div>
       </div>

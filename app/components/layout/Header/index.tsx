@@ -39,6 +39,7 @@ export function Header() {
           className={styles.mobileMenuButton}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
           aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {isMenuOpen ? <X aria-hidden="true" size={28} /> : <Menu aria-hidden="true" size={28} />}
@@ -46,7 +47,7 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className={styles.mobileNav}>
+        <div id="mobile-menu" className={styles.mobileNav}>
           <nav aria-label="Navegação mobile">
             <ul className={styles.mobileNavList}>
               {navLinks.map((link) => (

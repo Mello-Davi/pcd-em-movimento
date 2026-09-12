@@ -48,7 +48,7 @@ export function Testimonials() {
               <p className={styles.testimonialQuote}>"{t.text}"</p>
               
               <div className={styles.authorInfo}>
-                <div className={`${styles.avatar} ${t.color}`}>{t.initials}</div>
+                <div className={`${styles.avatar} ${t.color}`} aria-hidden="true">{t.initials}</div>
                 <div>
                   <h4 className={styles.authorName}>{t.author}</h4>
                   <p className={styles.authorRole}>{t.role}</p>

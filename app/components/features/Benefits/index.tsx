@@ -30,7 +30,7 @@ export function Benefits() {
           </div>
           
           <div className={styles.mediaWrapper}>
-            <img src={canoaImg} alt="Canoa no mar" className={styles.mediaImage} />
+            <img src={canoaImg} alt="Canoa havaiana adaptada navegando no mar aberto com participantes remando" className={styles.mediaImage} />
             <div className={styles.quoteOverlay}>
               <p className={styles.quoteText}>"O mar não tem barreiras."</p>
               <p className={styles.quoteAuthor}>Equipe PCD em Movimento</p>
