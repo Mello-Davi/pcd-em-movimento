@@ -13,16 +13,16 @@ export function Participate() {
           <p className={styles.subtitle}>Há um lugar para todo mundo nesse barco. Escolha como você quer contribuir.</p>
         </div>
 
-        <div className={styles.grid}>
+        <div className={styles.rolesList}>
           {/* Participante */}
-          <div className={styles.cardBlue}>
+          <div className={`${styles.roleCard} ${styles.roleCardParticipant}`}>
             <div className="mb-6 text-3xl">🛶</div>
-            <p className={styles.cardTag}>PESSOA COM DEFICIÊNCIA</p>
-            <h3 className={styles.cardTitle}>Participante</h3>
-            <p className={styles.cardDesc}>
+            <p className={styles.roleCategory}>PESSOA COM DEFICIÊNCIA</p>
+            <h3 className={styles.roleName}>Participante</h3>
+            <p className={styles.roleDescription}>
               Venha remar! O projeto é gratuito para pessoas com deficiência. Basta se inscrever, passar pela avaliação inicial e aparecer no sábado.
             </p>
-            <ul className={styles.list}>
+            <ul className={styles.benefitsList}>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Gratuito para PCDs</li>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Equipamento fornecido</li>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Acompanhamento individual</li>
@@ -34,14 +34,14 @@ export function Participate() {
           </div>
 
           {/* Voluntário */}
-          <div className={styles.cardGreen}>
+          <div className={`${styles.roleCard} ${styles.roleCardVolunteer}`}>
             <div className="mb-6 text-3xl">🤝</div>
-            <p className={styles.cardTag}>APOIE O PROJETO</p>
-            <h3 className={styles.cardTitle}>Voluntário</h3>
-            <p className={styles.cardDesc}>
+            <p className={styles.roleCategory}>APOIE O PROJETO</p>
+            <h3 className={styles.roleName}>Voluntário</h3>
+            <p className={styles.roleDescription}>
               Seja instrutor, apoio logístico, comunicação ou suporte às famílias. Todo perfil é bem-vindo — o importante é ter vontade de ajudar.
             </p>
-            <ul className={styles.list}>
+            <ul className={styles.benefitsList}>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Treinamento incluído</li>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Fins de semana</li>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Certificado de voluntariado</li>
@@ -53,14 +53,14 @@ export function Participate() {
           </div>
 
           {/* Apoiador */}
-          <div className={styles.cardDark}>
+          <div className={`${styles.roleCard} ${styles.roleCardSupporter}`}>
             <div className="mb-6 text-3xl">💚</div>
-            <p className={styles.cardTag}>EMPRESA OU PESSOA</p>
-            <h3 className={styles.cardTitle}>Apoiador</h3>
-            <p className={styles.cardDesc}>
+            <p className={styles.roleCategory}>EMPRESA OU PESSOA</p>
+            <h3 className={styles.roleName}>Apoiador</h3>
+            <p className={styles.roleDescription}>
               Apoie financeiramente e ajude a expandir o projeto para mais cidades e mais participantes. Cada contribuição gera impacto real.
             </p>
-            <ul className={styles.list}>
+            <ul className={styles.benefitsList}>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Pessoas Físicas e Jurídicas</li>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Relatórios de impacto</li>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Visibilidade da marca</li>

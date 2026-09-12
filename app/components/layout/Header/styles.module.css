@@ -26,6 +26,7 @@
   padding: 0.25rem;
   border-radius: 0.25rem;
   text-decoration: none;
+  transform: scale(1.5);
 }
 
 .desktopNav {

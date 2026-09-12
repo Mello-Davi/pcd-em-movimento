@@ -39,15 +39,15 @@ export function Testimonials() {
         />
         <p className={styles.subtitle}>As palavras de quem viveu a transformação</p>
 
-        <div className={styles.grid}>
+        <div className={styles.testimonialsCarousel}>
           {testimonials.map((t, idx) => (
-            <div key={idx} className={styles.card}>
-              <div className={styles.stars} aria-label="Avaliação de 5 estrelas">
+            <div key={idx} className={styles.testimonialCard}>
+              <div className={styles.ratingContainer} aria-label="Avaliação de 5 estrelas">
                 {[...Array(5)].map((_, i) => <Star key={i} aria-hidden="true" size={16} className="fill-brand-green text-brand-green" />)}
               </div>
-              <p className={styles.text}>"{t.text}"</p>
+              <p className={styles.testimonialQuote}>"{t.text}"</p>
               
-              <div className={styles.authorContainer}>
+              <div className={styles.authorInfo}>
                 <div className={`${styles.avatar} ${t.color}`}>{t.initials}</div>
                 <div>
                   <h4 className={styles.authorName}>{t.author}</h4>

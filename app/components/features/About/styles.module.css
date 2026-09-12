@@ -6,7 +6,7 @@
   padding-right: 1rem;
 }
 
-.grid {
+.aboutLayout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
@@ -15,7 +15,7 @@
 }
 
 @media (min-width: 1024px) {
-  .grid {
+  .aboutLayout {
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
   }
@@ -39,13 +39,13 @@
   margin: 0;
 }
 
-.cardsColumn {
+.valuesList {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.cardDark, .cardBlue, .cardGreen {
+.valueCard {
   border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
@@ -54,26 +54,26 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.cardDark {
+.valueCardAcolhimento {
   background-color: var(--color-brand-dark);
 }
 
-.cardBlue {
+.valueCardInclusao {
   background-color: #1e5896;
 }
 
-.cardGreen {
+.valueCardMovimento {
   background-color: var(--color-brand-green);
 }
 
-.iconWrapperDark, .iconWrapperBlue, .iconWrapperGreen {
+.valueIconWrapper {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 0.75rem;
   border-radius: 0.5rem;
   flex-shrink: 0;
 }
 
-.cardTitleWhite {
+.valueTitle {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   font-weight: 700;
@@ -82,26 +82,26 @@
   margin-bottom: 0.5rem;
 }
 
-.cardTextWhite {
+.valueDescription {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.625;
   font-size: 0.875rem;
   margin: 0;
 }
 
-.bottomCards {
+.institutionalList {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .bottomCards {
+  .institutionalList {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.infoCard {
+.institutionalCard {
   background-color: var(--color-brand-light);
   border: 1px solid #dbeafe;
   border-radius: 0.75rem;

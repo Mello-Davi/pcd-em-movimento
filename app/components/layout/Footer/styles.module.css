@@ -13,20 +13,20 @@
   padding-right: 1rem;
 }
 
-.grid {
+.footerLayout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
 }
 
 @media (min-width: 768px) {
-  .grid {
+  .footerLayout {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .grid {
+  .footerLayout {
     grid-template-columns: repeat(4, 1fr);
   }
   .brandCol {

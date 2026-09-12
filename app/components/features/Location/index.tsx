@@ -6,8 +6,8 @@ export function Location() {
   return (
     <Section theme="white">
       <div className={styles.container}>
-        <div className={styles.grid}>
-          <div className={styles.content}>
+        <div className={styles.locationLayout}>
+          <div className={styles.locationInfo}>
             <span className={styles.tag}>Onde Acontece</span>
             <h2 className={styles.title}>
               Venha remar <br/>
@@ -17,29 +17,29 @@ export function Location() {
               Nossas atividades acontecem em locais cuidadosamente escolhidos pela acessibilidade e beleza natural. Toda infraestrutura é adaptada para receber você com conforto e segurança.
             </p>
             
-            <div className={styles.cardsList}>
-              <div className={styles.locationCard}>
-                <div className={styles.iconWrapperBlue}>
+            <div className={styles.schedulesList}>
+              <div className={`${styles.scheduleCard} ${styles.scheduleCardSaturday}`}>
+                <div className={`${styles.scheduleIconWrapper} ${styles.iconSaturday}`}>
                   <Clock className="text-white" aria-hidden="true" size={24} />
                 </div>
                 <div>
                   <h3 className={styles.cardTitle}>Sábados</h3>
-                  <p className={styles.time}>07:00 – 10:00h</p>
-                  <p className={styles.address}>
+                  <p className={`${styles.scheduleTime} ${styles.timeSaturday}`}>07:00 – 10:00h</p>
+                  <p className={styles.scheduleAddress}>
                     <MapPin aria-hidden="true" size={16} className="inline mr-1" />
                     Represa de Guarapiranga, São Paulo
                   </p>
                 </div>
               </div>
 
-              <div className={styles.locationCardGreen}>
-                <div className={styles.iconWrapperGreen}>
+              <div className={`${styles.scheduleCard} ${styles.scheduleCardSunday}`}>
+                <div className={`${styles.scheduleIconWrapper} ${styles.iconSunday}`}>
                   <Clock className="text-white" aria-hidden="true" size={24} />
                 </div>
                 <div>
                   <h3 className={styles.cardTitle}>Domingos</h3>
-                  <p className={styles.timeGreen}>08:00 – 11:00h</p>
-                  <p className={styles.addressGreen}>
+                  <p className={`${styles.scheduleTime} ${styles.timeSunday}`}>08:00 – 11:00h</p>
+                  <p className={styles.scheduleAddress}>
                     <MapPin aria-hidden="true" size={16} className="inline mr-1" />
                     Praia Grande – SP (1º domingo do mês)
                   </p>
@@ -47,7 +47,7 @@ export function Location() {
               </div>
             </div>
 
-            <div className={styles.alert}>
+            <div className={styles.registrationAlert}>
               <p><strong>Inscrição obrigatória.</strong> As vagas são limitadas para garantir a segurança de todos. Entre em contato para se inscrever gratuitamente.</p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export function Location() {
             <div className={styles.mapOverlay}>
               <h3 className={styles.mapTitle}>Represa de Guarapiranga</h3>
               <p className={styles.mapSubtitle}>São Paulo – SP</p>
-              <a href="#" className={styles.mapButton}>Ver no Google Maps</a>
+              <a href="#" className={styles.mapLink}>Ver no Google Maps</a>
             </div>
           </div>
         </div>

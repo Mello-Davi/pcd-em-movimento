@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.grid}>
+        <div className={styles.footerLayout}>
           <div className={styles.brandCol}>
             <Link to="/" className={styles.logoLink}>
               <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-10 w-auto" />

@@ -16,23 +16,23 @@ export function Benefits() {
   return (
     <Section theme="white">
       <div className={styles.container}>
-        <div className={styles.grid}>
-          <div className={styles.content}>
-            <h2 className={styles.title}>Benefícios comprovados</h2>
-            <ul className={styles.list}>
+        <div className={styles.benefitsLayout}>
+          <div className={styles.benefitsText}>
+            <h2 className={styles.sectionTitle}>Benefícios comprovados</h2>
+            <ul className={styles.benefitsList}>
               {benefits.map((benefit, idx) => (
-                <li key={idx} className={styles.listItem}>
-                  <CheckCircle2 className={styles.icon} aria-hidden="true" size={24} />
+                <li key={idx} className={styles.benefitItem}>
+                  <CheckCircle2 className={styles.benefitIcon} aria-hidden="true" size={24} />
                   <span>{benefit}</span>
                 </li>
               ))}
             </ul>
           </div>
           
-          <div className={styles.imageContainer}>
-            <img src={canoaImg} alt="Canoa no mar" className={styles.image} />
-            <div className={styles.imageOverlay}>
-              <p className={styles.quote}>"O mar não tem barreiras."</p>
+          <div className={styles.mediaWrapper}>
+            <img src={canoaImg} alt="Canoa no mar" className={styles.mediaImage} />
+            <div className={styles.quoteOverlay}>
+              <p className={styles.quoteText}>"O mar não tem barreiras."</p>
               <p className={styles.quoteAuthor}>Equipe PCD em Movimento</p>
             </div>
           </div>
