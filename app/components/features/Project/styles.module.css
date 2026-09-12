@@ -1,12 +1,14 @@
-@reference "tailwindcss";
-.container { @apply flex flex-col lg:flex-row items-center gap-12; }
-.textContent { @apply lg:w-1/2; }
-.description { @apply text-lg text-gray-700 mb-6 leading-relaxed; }
-.benefitsList { @apply space-y-6 mt-8; }
-.benefitItem { @apply flex gap-4; }
-.iconWrapper { @apply w-12 h-12 bg-green-100 rounded-full flex items-center justify-center shrink-0 text-green-700; }
-.benefitTitle { @apply text-xl font-bold text-blue-900 mb-2; }
-.benefitText { @apply text-gray-700; }
-.imageGrid { @apply lg:w-1/2 w-full grid grid-cols-2 gap-4; }
-.imageLeft { @apply rounded-2xl w-full h-64 object-cover mt-8; }
-.imageRight { @apply rounded-2xl w-full h-80 object-cover; }
+@reference "../../../app.css";
+
+.container { @apply container mx-auto px-4; }
+.subtitle { @apply text-center text-gray-600 max-w-2xl mx-auto text-lg mb-16; }
+
+.grid { @apply grid grid-cols-1 md:grid-cols-3 gap-8; }
+.card { @apply bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-start; }
+
+.iconWrapperBlue { @apply bg-blue-100 p-4 rounded-xl mb-6; }
+.iconWrapperGreen { @apply bg-green-100 p-4 rounded-xl mb-6; }
+.iconWrapperLightBlue { @apply bg-blue-200 p-4 rounded-xl mb-6; }
+
+.cardTitle { @apply font-serif text-xl font-bold text-brand-dark mb-4; }
+.cardText { @apply text-gray-600 leading-relaxed text-sm; }

@@ -2,22 +2,21 @@ import React from "react";
 import styles from "./styles.module.css";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "success" | "outline";
+  variant?: "primary" | "secondary" | "success" | "outline" | "white";
   fullWidth?: boolean;
 }
 
-export function Button({ variant = "primary", fullWidth, className, children, ...props }: ButtonProps) {
-  const combinedClassName = [
-    styles.button,
-    styles[variant],
-    styles.normal,
-    fullWidth ? styles.fullWidth : "",
-    className || ""
-  ].join(" ").trim();
-
-  return (
-    <button className={combinedClassName} {...props}>
-      {children}
-    </button>
-  );
-}
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant = "primary", fullWidth, children, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        className={`${styles.button} ${styles[variant]} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
+Button.displayName = "Button";

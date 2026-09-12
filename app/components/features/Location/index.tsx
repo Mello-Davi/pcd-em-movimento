@@ -1,68 +1,63 @@
-import { MapPin, Clock, Calendar } from "lucide-react";
 import { Section } from "../../ui/Section";
-import { SectionTitle } from "../../ui/SectionTitle";
+import { Clock, MapPin } from "lucide-react";
 import styles from "./styles.module.css";
 
 export function Location() {
   return (
-    <Section id="onde-acontece" theme="dark">
+    <Section theme="white">
       <div className={styles.container}>
-        <div className={styles.infoWrapper}>
-          <SectionTitle theme="dark">Onde Acontece</SectionTitle>
-          <p className={styles.description}>
-            Venha conhecer nosso projeto e sentir a energia do mar. 
-            Nossa base conta com acessibilidade e equipe preparada para receber você.
-          </p>
-          
-          <div className={styles.detailsList}>
-            <div className={styles.detailItem}>
-              <div className={styles.iconWrapper}>
-                <MapPin size={28} className={styles.icon} aria-hidden="true" />
+        <div className={styles.grid}>
+          <div className={styles.content}>
+            <span className={styles.tag}>Onde Acontece</span>
+            <h2 className={styles.title}>
+              Venha remar <br/>
+              <span className="text-brand-green">com a gente</span>
+            </h2>
+            <p className={styles.description}>
+              Nossas atividades acontecem em locais cuidadosamente escolhidos pela acessibilidade e beleza natural. Toda infraestrutura é adaptada para receber você com conforto e segurança.
+            </p>
+            
+            <div className={styles.cardsList}>
+              <div className={styles.locationCard}>
+                <div className={styles.iconWrapperBlue}>
+                  <Clock className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className={styles.cardTitle}>Sábados</h3>
+                  <p className={styles.time}>07:00 – 10:00h</p>
+                  <p className={styles.address}>
+                    <MapPin size={16} className="inline mr-1" />
+                    Represa de Guarapiranga, São Paulo
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className={styles.detailTitle}>Localização</h4>
-                <p className={styles.detailText}>Posto 6, Praia de Copacabana<br />Rio de Janeiro - RJ</p>
+
+              <div className={styles.locationCardGreen}>
+                <div className={styles.iconWrapperGreen}>
+                  <Clock className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className={styles.cardTitle}>Domingos</h3>
+                  <p className={styles.timeGreen}>08:00 – 11:00h</p>
+                  <p className={styles.addressGreen}>
+                    <MapPin size={16} className="inline mr-1" />
+                    Praia Grande – SP (1º domingo do mês)
+                  </p>
+                </div>
               </div>
             </div>
-            
-            <div className={styles.detailItem}>
-              <div className={styles.iconWrapper}>
-                <Calendar size={28} className={styles.icon} aria-hidden="true" />
-              </div>
-              <div>
-                <h4 className={styles.detailTitle}>Dias de Atividade</h4>
-                <p className={styles.detailText}>Terças, Quintas e Sábados</p>
-              </div>
-            </div>
-            
-            <div className={styles.detailItem}>
-              <div className={styles.iconWrapper}>
-                <Clock size={28} className={styles.icon} aria-hidden="true" />
-              </div>
-              <div>
-                <h4 className={styles.detailTitle}>Horários</h4>
-                <p className={styles.detailText}>Turma 1: 07h00 - 08h30<br />Turma 2: 08h30 - 10h00</p>
-              </div>
+
+            <div className={styles.alert}>
+              <p><strong>Inscrição obrigatória.</strong> As vagas são limitadas para garantir a segurança de todos. Entre em contato para se inscrever gratuitamente.</p>
             </div>
           </div>
-        </div>
-        
-        <div className={styles.mapContainer}>
-          <img 
-            src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?q=80&w=1000&auto=format&fit=crop" 
-            alt="Vista da praia de Copacabana" 
-            className={styles.mapImage}
-          />
-          <div className={styles.mapOverlay}>
-            <a 
-              href="https://maps.google.com" 
-              target="_blank" 
-              rel="noreferrer"
-              className={styles.mapButton}
-            >
-              <MapPin size={20} />
-              Abrir no Google Maps
-            </a>
+
+          <div className={styles.mapContainer}>
+            <div className={styles.mapOverlay}>
+              <h3 className={styles.mapTitle}>Represa de Guarapiranga</h3>
+              <p className={styles.mapSubtitle}>São Paulo – SP</p>
+              <a href="#" className={styles.mapButton}>Ver no Google Maps</a>
+            </div>
           </div>
         </div>
       </div>

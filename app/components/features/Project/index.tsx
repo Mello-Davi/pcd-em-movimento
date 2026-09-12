@@ -1,63 +1,57 @@
-import { Activity, Anchor, Sun } from "lucide-react";
 import { Section } from "../../ui/Section";
 import { SectionTitle } from "../../ui/SectionTitle";
+import { Eye, Ear, Accessibility } from "lucide-react";
 import styles from "./styles.module.css";
-import canoaImg from "../../../assets/canoaHavaianaMarAberto.png";
 
 export function Project() {
   return (
     <Section id="projeto" theme="light">
       <div className={styles.container}>
-        <div className={styles.textContent}>
-          <SectionTitle>O Projeto: Canoa Havaiana</SectionTitle>
-          <p className={styles.description}>
-            A Canoa Havaiana (Va'a) é um esporte que exige trabalho em equipe, sincronia e respeito. 
-            Nosso projeto adapta as embarcações e a metodologia de ensino para atender pessoas com diferentes 
-            tipos de deficiência, promovendo autonomia e socialização.
-          </p>
-          
-          <ul className={styles.benefitsList}>
-            <li className={styles.benefitItem}>
-              <div className={styles.iconWrapper}>
-                <Activity size={24} aria-hidden="true" />
-              </div>
-              <div>
-                <h4 className={styles.benefitTitle}>Saúde e Reabilitação</h4>
-                <p className={styles.benefitText}>O remo fortalece a musculatura, melhora a capacidade cardiorrespiratória e a coordenação motora.</p>
-              </div>
-            </li>
-            <li className={styles.benefitItem}>
-              <div className={styles.iconWrapper}>
-                <Anchor size={24} aria-hidden="true" />
-              </div>
-              <div>
-                <h4 className={styles.benefitTitle}>Inclusão Total</h4>
-                <p className={styles.benefitText}>Atendemos pessoas com deficiência visual, auditiva, cadeirantes e deficiências intelectuais, adaptando a experiência para cada necessidade.</p>
-              </div>
-            </li>
-            <li className={styles.benefitItem}>
-              <div className={styles.iconWrapper}>
-                <Sun size={24} aria-hidden="true" />
-              </div>
-              <div>
-                <h4 className={styles.benefitTitle}>Socialização e Natureza</h4>
-                <p className={styles.benefitText}>O contato com o mar e o trabalho em equipe na canoa promovem laços de amizade e bem-estar emocional.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <SectionTitle 
+          tag="O Projeto" 
+          title={
+            <>
+              A canoa como instrumento<br/>
+              <span className="text-blue-500">de transformação</span>
+            </>
+          }
+          align="center"
+        />
         
-        <div className={styles.imageGrid}>
-          <img 
-            src={canoaImg} 
-            alt="Canoa havaiana no mar aberto" 
-            className={styles.imageLeft}
-          />
-          <img 
-            src="https://images.unsplash.com/photo-1544079867-b50a0063d810?q=80&w=1000&auto=format&fit=crop" 
-            alt="Equipe remando junta na canoa" 
-            className={styles.imageRight}
-          />
+        <p className={styles.subtitle}>
+          A canoa havaiana adaptada é praticada em grupos de até 6 pessoas, com instrutores certificados e voluntários treinados para apoiar cada tipo de deficiência com segurança e respeito.
+        </p>
+
+        <div className={styles.grid}>
+          <div className={styles.card}>
+            <div className={styles.iconWrapperBlue}>
+              <Eye className="text-blue-600" size={28} />
+            </div>
+            <h3 className={styles.cardTitle}>Deficiência Visual</h3>
+            <p className={styles.cardText}>
+              Navegamos com guias visuais e comunicação verbal constante, garantindo segurança e autonomia total no barco.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <div className={styles.iconWrapperGreen}>
+              <Ear className="text-green-700" size={28} />
+            </div>
+            <h3 className={styles.cardTitle}>Deficiência Auditiva</h3>
+            <p className={styles.cardText}>
+              Utilizamos sinais visuais, língua de sinais e comunicação visual para integração plena na remada.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <div className={styles.iconWrapperLightBlue}>
+              <Accessibility className="text-blue-800" size={28} />
+            </div>
+            <h3 className={styles.cardTitle}>Cadeirantes</h3>
+            <p className={styles.cardText}>
+              Canoas adaptadas com suporte especializado para embarque, encaixes e remada segura na água.
+            </p>
+          </div>
         </div>
       </div>
     </Section>

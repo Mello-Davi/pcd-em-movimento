@@ -1,9 +1,26 @@
-@reference "tailwindcss";
+@reference "../../../app.css";
+
 .container { @apply container mx-auto px-4; }
-.header { @apply max-w-3xl mx-auto text-center mb-16; }
-.description { @apply text-lg text-gray-700 leading-relaxed; }
-.grid { @apply grid grid-cols-1 md:grid-cols-3 gap-8; }
-.card { @apply bg-blue-50 p-8 rounded-2xl text-center border border-blue-100 hover:shadow-lg transition-shadow; }
-.iconWrapper { @apply w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white; }
-.cardTitle { @apply text-2xl font-bold text-blue-900 mb-4; }
-.cardText { @apply text-gray-700; }
+.grid { @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16; }
+
+.textContent { @apply flex flex-col; }
+.prose { @apply text-gray-700 text-lg leading-relaxed flex flex-col gap-6; }
+
+.cardsColumn { @apply flex flex-col gap-4; }
+
+.cardDark { @apply bg-brand-dark rounded-xl p-6 flex items-start gap-5 shadow-lg; }
+.iconWrapperDark { @apply bg-white/20 p-3 rounded-lg shrink-0; }
+
+.cardBlue { @apply bg-[#1e5896] rounded-xl p-6 flex items-start gap-5 shadow-lg; }
+.iconWrapperBlue { @apply bg-white/20 p-3 rounded-lg shrink-0; }
+
+.cardGreen { @apply bg-brand-green rounded-xl p-6 flex items-start gap-5 shadow-lg; }
+.iconWrapperGreen { @apply bg-white/20 p-3 rounded-lg shrink-0; }
+
+.cardTitleWhite { @apply font-serif text-xl font-bold text-white mb-2; }
+.cardTextWhite { @apply text-white/90 leading-relaxed text-sm; }
+
+.bottomCards { @apply grid grid-cols-1 md:grid-cols-3 gap-6; }
+.infoCard { @apply bg-brand-light border border-blue-100 rounded-xl p-6; }
+.infoTitle { @apply font-bold text-blue-900 text-sm tracking-widest uppercase mb-3; }
+.infoText { @apply text-gray-700 text-sm leading-relaxed; }

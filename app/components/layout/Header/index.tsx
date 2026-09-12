@@ -19,7 +19,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logoLink} aria-label="Página inicial do PCD em Movimento">
-          <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-12 w-auto" />
+          <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-10 w-auto" />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Navegação principal">

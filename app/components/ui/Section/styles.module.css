@@ -1,6 +1,21 @@
-@reference "tailwindcss";
-.section { @apply py-20; }
-.white { @apply bg-white text-gray-900; }
-.light { @apply bg-gray-50 text-gray-900; }
-.dark { @apply bg-blue-900 text-white; }
-.container { @apply container mx-auto px-4; }
+@reference "../../../app.css";
+
+.section {
+  @apply py-20 lg:py-28 relative;
+}
+
+.white {
+  @apply bg-white;
+}
+
+.light {
+  @apply bg-brand-light;
+}
+
+.dark {
+  @apply bg-brand-dark;
+}
+
+.brand {
+  @apply bg-blue-900;
+}
