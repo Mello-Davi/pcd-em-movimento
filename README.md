@@ -1,77 +1,80 @@
-# Template de Projeto React
+# PCD em Movimento - Website Institucional
 
-Este repositório é um template inicial configurado para o desenvolvimento de aplicações web modernas e escaláveis. Ele integra ferramentas essenciais para roteamento, estilização, gerenciamento de estado e validação.
+Este repositório contém o código-fonte do website institucional da organização "PCD em Movimento". O projeto tem como objetivo divulgar o trabalho social realizado pela organização, que promove a inclusão social de pessoas com deficiência por meio da prática da canoa havaiana adaptada em Niterói, RJ.
 
-## Arquitetura e Tecnologias
+## Visão Geral do Projeto
 
-Este projeto foi construído utilizando:
+A aplicação foi desenvolvida como uma Landing Page moderna, focada em performance, acessibilidade universal (WCAG) e arquitetura de software de alta manutenção.
+
+### Principais Funcionalidades e Acessibilidade (a11y)
+- Suporte integral à navegação via teclado (Skip Links e outlines de alto contraste).
+- Otimização para leitores de tela com textos alternativos detalhados, atributos ARIA dinâmicos e isolamento de elementos puramente decorativos.
+- Comportamentos visuais adaptativos que respeitam as preferências do usuário (ex: desativação de animações via `prefers-reduced-motion`).
+- Componentes interativos nativos e leves, como carrosséis construídos com CSS Scroll Snap, eliminando dependências externas pesadas.
+
+## Tecnologias e Ferramentas
+
+O projeto utiliza tecnologias modernas de ecossistema React, restringindo ferramentas de terceiros sempre que as alternativas nativas são mais performáticas e escaláveis:
+
 - React 19
-- React Router v8
-- Vite
-- TypeScript
-- Tailwind CSS v4
-- Zustand (Gerenciamento de Estado Global)
-- React Hook Form + Zod (Validação de Formulários)
-- Axios (Cliente HTTP)
-- ESLint (Qualidade de Código)
+- React Router v8 (Configurado via Vite)
+- TypeScript (Strict mode habilitado)
+- CSS Modules (Vanilla CSS Puro)
+- Node.js & PNPM
 
-## Estrutura do Projeto
+## Arquitetura Limpa (Clean Architecture)
 
-O código-fonte está organizado dentro do diretório `app/` para manter a separação de responsabilidades:
+A organização do projeto segue estritamente os princípios da Clean Architecture para garantir o desacoplamento da interface em relação às regras de negócios e ferramentas externas. O diretório base do código-fonte é `app/`.
 
-- `app/routes/`
-  Contém as definições de rotas da aplicação e os componentes mapeados diretamente para as URLs. A lógica para busca de dados (loaders) e mutações (actions) específicas de uma rota devem residir aqui.
+### Estrutura de Diretórios
 
-- `app/pages/`
-  Contém composições completas de interface. Utilize este diretório para construir visualizações complexas, mantendo os arquivos dentro de `app/routes/` focados apenas em roteamento e agregação de dados.
+- `app/core/`
+  Contém o coração da aplicação. Totalmente agnóstico a bibliotecas visuais (sem código React).
+  - `domain/entities/`: Interfaces e tipos de domínio puro.
+  - `application/use-cases/`: Lógica de aplicação e regras de negócio.
+  - `application/repositories/`: Interfaces e contratos para as camadas externas.
+
+- `app/infrastructure/`
+  Implementações concretas de acesso a dados e adaptadores externos (ex: APIs, clientes HTTP, mocks).
 
 - `app/components/`
-  Contém componentes de interface modulares, genéricos e reutilizáveis (ex.: botões, inputs, modais) que podem ser compartilhados entre diferentes páginas e rotas.
+  Camada de apresentação estruturada. Apenas esta camada contém arquivos React (`.tsx`) e estilização (`.css`).
+  - `ui/`: Componentes base reutilizáveis (botões, seções estruturais).
+  - `layout/`: Partes fixas da interface (Cabeçalho, Rodapé).
+  - `features/`: Componentes complexos que refletem o domínio (Contato, Quem Somos, Depoimentos, etc).
+  - `hooks/`: Lógica de interface compartilhada (ex: observadores de scroll).
 
-- `app/hooks/`
-  Contém hooks customizados do React para lógicas compartilhadas, abstraindo efeitos colaterais ou comportamentos complexos para fora dos componentes.
+## Diretrizes de Codificação e Estilos
 
-- `app/stores/`
-  Contém as configurações de estado do Zustand. Estados globais devem ser separados logicamente em arquivos modulares dentro deste diretório.
+Este projeto aboliu o uso de strings utilitárias do Tailwind CSS na camada de componentes para garantir a previsibilidade e a leitura nativa do código.
 
-- `app/assets/`
-  Contém arquivos estáticos, como imagens, ícones e fontes locais.
+1. **CSS Modules Restritos:**
+   Todo componente React deve ter seu próprio arquivo `styles.module.css`. O uso da diretiva `@apply` do Tailwind é terminantemente proibido.
+2. **Nomenclatura Semântica (BEM-like):**
+   Os seletores de classe devem refletir diretamente o propósito ou domínio do conteúdo (ex: `.valueCardAcolhimento`, `.disabilityTitle`), rejeitando nomes focados em estilo (ex: `.cardDark`, `.textBlue`).
+3. **Isolamento do Componente:**
+   Todo componente obrigatoriamente segue a árvore: `PastaDoComponente/index.tsx` e `PastaDoComponente/styles.module.css`.
 
-## Executando o Projeto
+## Instruções de Execução
 
-Certifique-se de ter o Node.js e o `pnpm` instalados.
+Certifique-se de possuir o Node.js v20+ e o `pnpm` instalados no seu ambiente.
 
-1. **Instalar dependências:**
+1. Instalar as dependências:
    ```bash
    pnpm install
    ```
 
-2. **Iniciar o servidor de desenvolvimento:**
+2. Executar o servidor local de desenvolvimento:
    ```bash
    pnpm run dev
    ```
 
-3. **Gerar a build de produção:**
+3. Realizar validação estática (Typecheck e Build):
    ```bash
-   pnpm run build
+   pnpm run typecheck && pnpm run build
    ```
 
-4. **Visualizar a build de produção:**
+4. Visualizar o modo de produção:
    ```bash
    pnpm run start
    ```
-
-5. **Verificação de Tipos e Linting:**
-   Para verificar erros do TypeScript e regras do ESLint:
-   ```bash
-   pnpm run typecheck
-   
-   pnpm run lint
-   ```
-
-## Diretrizes de Desenvolvimento
-
-- **Formulários:** Construa formulários utilizando `react-hook-form` e realize a validação de dados utilizando `zod`.
-- **Gerenciamento de Estado:** Mantenha os componentes React majoritariamente sem estado próprio e gerencie os estados globais dentro de `app/stores/` utilizando o `zustand`.
-- **Estilização:** Utilize as classes utilitárias do Tailwind CSS, evitando criar arquivos CSS customizados sempre que possível.
-- **Requisições:** Utilize `axios` para requisições HTTP padrão.
