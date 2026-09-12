@@ -46,8 +46,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import { Header } from "./presentation/components/layout/Header";
+import { Footer } from "./presentation/components/layout/Footer";
 
 export default function App() {
   return (

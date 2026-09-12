@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+.section { @apply py-20; }
+.white { @apply bg-white text-gray-900; }
+.light { @apply bg-gray-50 text-gray-900; }
+.dark { @apply bg-blue-900 text-white; }
+.container { @apply container mx-auto px-4; }

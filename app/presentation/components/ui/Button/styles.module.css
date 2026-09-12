@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+.button { @apply font-bold rounded-xl flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-4; }
+.primary { @apply bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-300; }
+.secondary { @apply bg-white text-blue-900 hover:bg-gray-100 focus:ring-white/50; }
+.success { @apply bg-green-600 hover:bg-green-500 text-white focus:ring-green-600/50; }
+.outline { @apply border-2 border-white text-white hover:bg-white hover:text-blue-900 focus:ring-white; }
+.normal { @apply py-3 px-6; }
+.large { @apply py-4 px-8 text-lg; }
+.fullWidth { @apply w-full; }

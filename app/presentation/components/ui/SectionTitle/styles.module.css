@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+.title { @apply text-3xl md:text-4xl font-bold mb-6; }
+.light { @apply text-blue-900; }
+.dark { @apply text-white; }
+.left { @apply text-left; }
+.center { @apply text-center mx-auto; }

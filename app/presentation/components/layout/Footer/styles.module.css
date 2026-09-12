@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+.footer { @apply bg-blue-900 text-white pt-16 pb-8; }
+.container { @apply container mx-auto px-4; }
+.grid { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12; }
+.column { @apply flex flex-col gap-6; }
+.logoLink { @apply flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white rounded-lg p-1 w-max; }
+.logoIcon { @apply w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-900 font-bold text-xl; }
+.logoText { @apply font-bold text-xl; }
+.description { @apply text-blue-100 leading-relaxed text-sm lg:text-base; }
+.title { @apply font-bold text-lg mb-2; }
+.linkList { @apply flex flex-col gap-3; }
+.linkItem { @apply text-blue-100 hover:text-white hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded-sm px-1; }
+.contactList { @apply flex flex-col gap-4; }
+.contactItem { @apply flex items-center gap-3 text-blue-100; }
+.contactItemStart { @apply flex items-start gap-3 text-blue-100; }
+.icon { @apply shrink-0; }
+.iconTop { @apply shrink-0 mt-1; }
+.ctaButton { @apply bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-900 focus:ring-green-500; }
+.socialTitle { @apply font-bold text-lg mt-2; }
+.socialGroup { @apply flex items-center gap-4; }
+.socialIcon { @apply bg-blue-800 p-3 rounded-full hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-white; }
+.legal { @apply border-t border-blue-800 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-blue-200 text-sm; }
+.legalLinks { @apply flex gap-6; }

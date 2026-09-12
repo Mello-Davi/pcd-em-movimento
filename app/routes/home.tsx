@@ -1,8 +1,8 @@
 import type { Route } from "./+types/home";
 import { Hero } from "../presentation/components/features/Hero";
-import { About } from "../components/About";
-import { Project } from "../components/Project";
-import { Location } from "../components/Location";
+import { About } from "../presentation/components/features/About";
+import { Project } from "../presentation/components/features/Project";
+import { Location } from "../presentation/components/features/Location";
 import { Testimonials } from "../presentation/components/features/Testimonials";
 import { Contact } from "../presentation/components/features/Contact";
 
