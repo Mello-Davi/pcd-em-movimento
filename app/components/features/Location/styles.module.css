@@ -72,11 +72,6 @@
   gap: 1.25rem;
 }
 
-.scheduleCardSaturday {
-  background-color: var(--color-brand-light);
-  border: 1px solid #dbeafe;
-}
-
 .scheduleCardSunday {
   background-color: #f0fdf4;
   border: 1px solid #dcfce7;
@@ -86,10 +81,6 @@
   padding: 0.75rem;
   border-radius: 0.75rem;
   flex-shrink: 0;
-}
-
-.iconSaturday {
-  background-color: #2563eb;
 }
 
 .iconSunday {
@@ -109,10 +100,6 @@
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.5rem;
-}
-
-.timeSaturday {
-  color: #1d4ed8;
 }
 
 .timeSunday {

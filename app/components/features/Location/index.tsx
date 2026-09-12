@@ -18,20 +18,6 @@ export function Location() {
             </p>
             
             <div className={styles.schedulesList}>
-              <div className={`${styles.scheduleCard} ${styles.scheduleCardSaturday}`}>
-                <div className={`${styles.scheduleIconWrapper} ${styles.iconSaturday}`}>
-                  <Clock className="text-white" aria-hidden="true" size={24} />
-                </div>
-                <div>
-                  <h3 className={styles.cardTitle}>Sábados</h3>
-                  <p className={`${styles.scheduleTime} ${styles.timeSaturday}`}>07:00 – 10:00h</p>
-                  <p className={styles.scheduleAddress}>
-                    <MapPin aria-hidden="true" size={16} className="inline mr-1" />
-                    Represa de Guarapiranga, São Paulo
-                  </p>
-                </div>
-              </div>
-
               <div className={`${styles.scheduleCard} ${styles.scheduleCardSunday}`}>
                 <div className={`${styles.scheduleIconWrapper} ${styles.iconSunday}`}>
                   <Clock className="text-white" aria-hidden="true" size={24} />
