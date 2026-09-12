@@ -8,11 +8,11 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Início", href: "/inicio" },
-    { name: "Quem Somos", href: "/quem-somos" },
-    { name: "Projeto", href: "/projeto" },
-    { name: "Como Participar", href: "/participar" },
-    { name: "Contato", href: "/contato" },
+    { name: "Início", href: "/#inicio" },
+    { name: "Quem Somos", href: "/#quem-somos" },
+    { name: "Projeto", href: "/#projeto" },
+    { name: "Como Participar", href: "/#participar" },
+    { name: "Contato", href: "/#contato" },
   ];
 
   return (

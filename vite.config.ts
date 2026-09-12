@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter()],
+  base: "/pcd-em-movimento/",
   resolve: {
     tsconfigPaths: true,
   },
