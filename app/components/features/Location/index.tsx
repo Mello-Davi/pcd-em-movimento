@@ -20,13 +20,13 @@ export function Location() {
             <div className={styles.cardsList}>
               <div className={styles.locationCard}>
                 <div className={styles.iconWrapperBlue}>
-                  <Clock className="text-white" size={24} />
+                  <Clock className="text-white" aria-hidden="true" size={24} />
                 </div>
                 <div>
                   <h3 className={styles.cardTitle}>Sábados</h3>
                   <p className={styles.time}>07:00 – 10:00h</p>
                   <p className={styles.address}>
-                    <MapPin size={16} className="inline mr-1" />
+                    <MapPin aria-hidden="true" size={16} className="inline mr-1" />
                     Represa de Guarapiranga, São Paulo
                   </p>
                 </div>
@@ -34,13 +34,13 @@ export function Location() {
 
               <div className={styles.locationCardGreen}>
                 <div className={styles.iconWrapperGreen}>
-                  <Clock className="text-white" size={24} />
+                  <Clock className="text-white" aria-hidden="true" size={24} />
                 </div>
                 <div>
                   <h3 className={styles.cardTitle}>Domingos</h3>
                   <p className={styles.timeGreen}>08:00 – 11:00h</p>
                   <p className={styles.addressGreen}>
-                    <MapPin size={16} className="inline mr-1" />
+                    <MapPin aria-hidden="true" size={16} className="inline mr-1" />
                     Praia Grande – SP (1º domingo do mês)
                   </p>
                 </div>

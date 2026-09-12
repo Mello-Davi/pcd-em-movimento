@@ -25,7 +25,7 @@ export function Project() {
         <div className={styles.grid}>
           <div className={styles.card}>
             <div className={styles.iconWrapperBlue}>
-              <Eye className="text-blue-600" size={28} />
+              <Eye className="text-blue-600" aria-hidden="true" size={28} />
             </div>
             <h3 className={styles.cardTitle}>Deficiência Visual</h3>
             <p className={styles.cardText}>
@@ -35,7 +35,7 @@ export function Project() {
 
           <div className={styles.card}>
             <div className={styles.iconWrapperGreen}>
-              <Ear className="text-green-700" size={28} />
+              <Ear className="text-green-700" aria-hidden="true" size={28} />
             </div>
             <h3 className={styles.cardTitle}>Deficiência Auditiva</h3>
             <p className={styles.cardText}>
@@ -45,7 +45,7 @@ export function Project() {
 
           <div className={styles.card}>
             <div className={styles.iconWrapperLightBlue}>
-              <Accessibility className="text-blue-800" size={28} />
+              <Accessibility className="text-blue-800" aria-hidden="true" size={28} />
             </div>
             <h3 className={styles.cardTitle}>Cadeirantes</h3>
             <p className={styles.cardText}>

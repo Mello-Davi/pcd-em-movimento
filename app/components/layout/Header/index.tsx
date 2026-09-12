@@ -41,7 +41,7 @@ export function Header() {
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMenuOpen ? <X aria-hidden="true" size={28} /> : <Menu aria-hidden="true" size={28} />}
         </button>
       </div>
 

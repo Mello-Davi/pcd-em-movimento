@@ -34,7 +34,7 @@ export function About() {
           <div className={styles.cardsColumn}>
             <div className={styles.cardDark}>
               <div className={styles.iconWrapperDark}>
-                <Heart size={24} className="text-white" />
+                <Heart aria-hidden="true" size={24} className="text-white" />
               </div>
               <div>
                 <h3 className={styles.cardTitleWhite}>Acolhimento</h3>
@@ -44,7 +44,7 @@ export function About() {
             
             <div className={styles.cardBlue}>
               <div className={styles.iconWrapperBlue}>
-                <Users size={24} className="text-white" />
+                <Users aria-hidden="true" size={24} className="text-white" />
               </div>
               <div>
                 <h3 className={styles.cardTitleWhite}>Inclusão</h3>
@@ -54,7 +54,7 @@ export function About() {
             
             <div className={styles.cardGreen}>
               <div className={styles.iconWrapperGreen}>
-                <Waves size={24} className="text-white" />
+                <Waves aria-hidden="true" size={24} className="text-white" />
               </div>
               <div>
                 <h3 className={styles.cardTitleWhite}>Movimento</h3>

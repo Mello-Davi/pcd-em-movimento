@@ -23,10 +23,10 @@ export function Participate() {
               Venha remar! O projeto é gratuito para pessoas com deficiência. Basta se inscrever, passar pela avaliação inicial e aparecer no sábado.
             </p>
             <ul className={styles.list}>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Gratuito para PCDs</li>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Equipamento fornecido</li>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Acompanhamento individual</li>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Sem experiência prévia</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Gratuito para PCDs</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Equipamento fornecido</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Acompanhamento individual</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Sem experiência prévia</li>
             </ul>
             <div className="mt-auto pt-8">
               <Button variant="outline" fullWidth>Quero Participar</Button>
@@ -42,10 +42,10 @@ export function Participate() {
               Seja instrutor, apoio logístico, comunicação ou suporte às famílias. Todo perfil é bem-vindo — o importante é ter vontade de ajudar.
             </p>
             <ul className={styles.list}>
-              <li><CheckCircle2 size={18} className="text-green-300 shrink-0" /> Treinamento incluído</li>
-              <li><CheckCircle2 size={18} className="text-green-300 shrink-0" /> Fins de semana</li>
-              <li><CheckCircle2 size={18} className="text-green-300 shrink-0" /> Certificado de voluntariado</li>
-              <li><CheckCircle2 size={18} className="text-green-300 shrink-0" /> Comunidade incrível</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Treinamento incluído</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Fins de semana</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Certificado de voluntariado</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Comunidade incrível</li>
             </ul>
             <div className="mt-auto pt-8">
               <Button variant="outline" fullWidth>Ser Voluntário</Button>
@@ -61,10 +61,10 @@ export function Participate() {
               Apoie financeiramente e ajude a expandir o projeto para mais cidades e mais participantes. Cada contribuição gera impacto real.
             </p>
             <ul className={styles.list}>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Pessoas Físicas e Jurídicas</li>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Relatórios de impacto</li>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Visibilidade da marca</li>
-              <li><CheckCircle2 size={18} className="text-blue-300 shrink-0" /> Dedução fiscal (MEI/PJ)</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Pessoas Físicas e Jurídicas</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Relatórios de impacto</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Visibilidade da marca</li>
+              <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Dedução fiscal (MEI/PJ)</li>
             </ul>
             <div className="mt-auto pt-8">
               <Button variant="outline" fullWidth>Apoiar o Projeto</Button>

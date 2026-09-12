@@ -42,8 +42,8 @@ export function Testimonials() {
         <div className={styles.grid}>
           {testimonials.map((t, idx) => (
             <div key={idx} className={styles.card}>
-              <div className={styles.stars}>
-                {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-brand-green text-brand-green" />)}
+              <div className={styles.stars} aria-label="Avaliação de 5 estrelas">
+                {[...Array(5)].map((_, i) => <Star key={i} aria-hidden="true" size={16} className="fill-brand-green text-brand-green" />)}
               </div>
               <p className={styles.text}>"{t.text}"</p>
               

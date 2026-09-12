@@ -22,7 +22,7 @@ export function Benefits() {
             <ul className={styles.list}>
               {benefits.map((benefit, idx) => (
                 <li key={idx} className={styles.listItem}>
-                  <CheckCircle2 className={styles.icon} size={24} />
+                  <CheckCircle2 className={styles.icon} aria-hidden="true" size={24} />
                   <span>{benefit}</span>
                 </li>
               ))}
