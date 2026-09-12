@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/image.png" alt="Logotipo PCD em Movimento" width="150" />
+</p>
+
 # PCD em Movimento - Website Institucional
 
 Este repositório contém o código-fonte do website institucional da organização "PCD em Movimento". O projeto tem como objetivo divulgar o trabalho social realizado pela organização, que promove a inclusão social de pessoas com deficiência por meio da prática da canoa havaiana adaptada em Niterói, RJ.
@@ -22,28 +26,6 @@ O projeto utiliza tecnologias modernas de ecossistema React, restringindo ferram
 - CSS Modules (Vanilla CSS Puro)
 - Node.js & PNPM
 
-## Arquitetura Limpa (Clean Architecture)
-
-A organização do projeto segue estritamente os princípios da Clean Architecture para garantir o desacoplamento da interface em relação às regras de negócios e ferramentas externas. O diretório base do código-fonte é `app/`.
-
-### Estrutura de Diretórios
-
-- `app/core/`
-  Contém o coração da aplicação. Totalmente agnóstico a bibliotecas visuais (sem código React).
-  - `domain/entities/`: Interfaces e tipos de domínio puro.
-  - `application/use-cases/`: Lógica de aplicação e regras de negócio.
-  - `application/repositories/`: Interfaces e contratos para as camadas externas.
-
-- `app/infrastructure/`
-  Implementações concretas de acesso a dados e adaptadores externos (ex: APIs, clientes HTTP, mocks).
-
-- `app/components/`
-  Camada de apresentação estruturada. Apenas esta camada contém arquivos React (`.tsx`) e estilização (`.css`).
-  - `ui/`: Componentes base reutilizáveis (botões, seções estruturais).
-  - `layout/`: Partes fixas da interface (Cabeçalho, Rodapé).
-  - `features/`: Componentes complexos que refletem o domínio (Contato, Quem Somos, Depoimentos, etc).
-  - `hooks/`: Lógica de interface compartilhada (ex: observadores de scroll).
-
 ## Diretrizes de Codificação e Estilos
 
 Este projeto aboliu o uso de strings utilitárias do Tailwind CSS na camada de componentes para garantir a previsibilidade e a leitura nativa do código.
@@ -55,26 +37,8 @@ Este projeto aboliu o uso de strings utilitárias do Tailwind CSS na camada de c
 3. **Isolamento do Componente:**
    Todo componente obrigatoriamente segue a árvore: `PastaDoComponente/index.tsx` e `PastaDoComponente/styles.module.css`.
 
-## Instruções de Execução
+## Créditos
 
-Certifique-se de possuir o Node.js v20+ e o `pnpm` instalados no seu ambiente.
+Desenvolvido por **Davi Rodrigues** (GitHub: [Mello-Davi](https://github.com/Mello-Davi)).
 
-1. Instalar as dependências:
-   ```bash
-   pnpm install
-   ```
-
-2. Executar o servidor local de desenvolvimento:
-   ```bash
-   pnpm run dev
-   ```
-
-3. Realizar validação estática (Typecheck e Build):
-   ```bash
-   pnpm run typecheck && pnpm run build
-   ```
-
-4. Visualizar o modo de produção:
-   ```bash
-   pnpm run start
-   ```
+*Powered by AI*
