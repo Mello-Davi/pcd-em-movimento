@@ -4,6 +4,7 @@ import { About } from "../components/About";
 import { Project } from "../components/Project";
 import { Location } from "../components/Location";
 import { Testimonials } from "../components/Testimonials";
+import { Contact } from "../components/Contact";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -20,6 +21,7 @@ export default function Home() {
       <Project />
       <Location />
       <Testimonials />
+      <Contact />
     </>
   );
 }
