@@ -25,7 +25,7 @@ export function Hero() {
         <div className={styles.content}>
           <div className={styles.tag}>
             <span className={styles.tagIcon} aria-hidden="true">≈</span>
-            Canoa Havaiana Adaptada • Inclusão Social
+            Esteporte Adaptado • Acessibilidade • Canoa Polinésia •  Inclusão Social
           </div>
           
           <h1 className={styles.title}>
@@ -34,7 +34,7 @@ export function Hero() {
           </h1>
           
           <p className={styles.subtitle}>
-            O PCD em Movimento leva pessoas com deficiência ao oceano através da canoa havaiana adaptada, promovendo inclusão, saúde e conexão humana.
+            O projeto PCD em Movimento leva pessoas com qualquer deficiência ou dificuldade e sua família para remar na canoa polinésia, contruindo pontes e fortalecendo as conexões entre pessoas.
           </p>
           
           <div className={styles.actions}>
@@ -49,15 +49,15 @@ export function Hero() {
 
         <div className={styles.statsContainer} aria-label="Estatísticas do projeto">
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>200+</span>
+            <span className={styles.statNumber}>+2000</span>
             <span className={styles.statLabel}>Participantes atendidos</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>4 anos</span>
+            <span className={styles.statNumber}>+3 anos</span>
             <span className={styles.statLabel}>Transformando vidas</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>3</span>
+            <span className={styles.statNumber}>14</span>
             <span className={styles.statLabel}>Tipos de deficiência</span>
           </div>
         </div>

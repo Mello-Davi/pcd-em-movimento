@@ -6,23 +6,23 @@ import styles from "./styles.module.css";
 export function Testimonials() {
   const testimonials = [
     {
-      text: "Quando entrei na canoa pela primeira vez, senti o vento no rosto e ouvi o barulho das águas. Foi a primeira vez em anos que me senti completamente livre. A equipe me fez sentir em casa desde o primeiro momento.",
-      author: "Mariana Costa",
+      text: "Meu encontro com o projeto foi um encontro feliz, porque ele me permite uma atividade de lazer, uma atividade de confraternização com outras pessoas com deficiência e é muito importante dizer que estar próxima ao mar faz com que a gente tenha o reconhecimento de que nós pessoas com deficiência podemos tudo o que a gente quiser fazer. E é muito gratificante que o PCD em Movimento proporcione esse encontro para nós. Eu agradeço demais à coordenação desse projeto",
+      author: "Gislana Vale",
       role: "Participante — Deficiência Visual",
       initials: "MC",
       color: "bg-blue-600"
     },
     {
-      text: "Eu nunca imaginei que praticaria esporte aquático. O projeto não só mudou minha condição física — mudou minha autoestima. Hoje sou um remador de verdade, e isso me dá orgulho todos os dias.",
-      author: "Roberto Alves",
-      role: "Participante — Cadeirante",
+      text: "Eu sou amputada de ambas as pernas. Quando eu cheguei aqui, eu encontrei uma família com acolhimento, com abraço gostoso, sincero. Tudo que é mar pra mim é maravilhoso, e isso me dá uma paz. É indescritível. Se você puder, venha conhecer o PCD em Movimento, que é maravilhoso e uma grande família.",
+      author: "Denise Penaforte",
+      role: "Participante — Amputada de Ambas as pernas",
       initials: "RA",
       color: "bg-brand-green"
     },
     {
-      text: "Ser voluntária no PCD em Movimento é a experiência mais enriquecedora da minha vida. Ver a transformação no rosto das pessoas quando chegam ao oceano pela primeira vez é algo que não tem preço.",
-      author: "Cláudia Mendes",
-      role: "Voluntária há 3 anos",
+      text: "Quando chegamos num projeto como voluntária a ideia inicial é ajudar, somar, multiplicar. Mas, ser voluntária do projeto PcD em Movimento é muito mais que montar canoas, levar coletes salva vidas, pegar remos. Lidamos com pessoas com as mais variadas necessidades, por isso aprendemos com elas, trocamos, nos despimos de capacitismo incrustado. Quando percebemos, crescemos e amadurecemos juntos. É um privilégio.",
+      author: "Cristina Guimarães",
+      role: "Voluntária",
       initials: "CM",
       color: "bg-blue-900"
     }

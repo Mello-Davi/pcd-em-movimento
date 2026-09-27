@@ -24,7 +24,7 @@ export function Location() {
                 </div>
                 <div>
                   <h3 className={styles.cardTitle}>Domingos</h3>
-                  <p className={`${styles.scheduleTime} ${styles.timeSunday}`}>08:00 – 11:00h</p>
+                  <p className={`${styles.scheduleTime} ${styles.timeSunday}`}>Aos sábados, quinzenalmente, de 9h às 11h</p>
                   <p className={styles.scheduleAddress}>
                     <MapPin aria-hidden="true" size={16} className="inline mr-1" />
                     Praia de Charitas, Niterói – RJ (Quiosque 19 - Point do Remador)

@@ -14,19 +14,20 @@ export function About() {
               tag="Quem Somos" 
               title={
                 <>
-                  Nascemos do oceano,<br/>
-                  <span className="text-blue-600">crescemos na</span><br/>
-                  <span className="text-blue-600">comunidade</span>
+                  Apaixonados por canoa polinésia e
+                  <span className="text-blue-600"> movido pelo ideal</span>
+                  <span className="text-blue-600"> de um mundo igualitário</span>
                 </>
               } 
             />
             
             <div className={styles.prose}>
               <p>
-                A <strong>PCD em Movimento</strong> é uma organização sem fins lucrativos fundada em 2019 em Niterói, dedicada à inclusão social de pessoas com deficiência por meio do esporte adaptado.
+                A <strong>Associação PCD em Movimento</strong> é uma organização sem fins lucrativos fundada oficialmente em 2025. Nossa história, no entanto, começou muito antes dessa data, nas iniciativas de um grupo apaixonado por esporte e movido pelo dial de um mundo igualiátio.
               </p>
               <p>
-                Nossa prática central — a canoa havaiana adaptada — une saúde física, saúde mental, socialização e contato com a natureza em uma experiência transformadora. Acreditamos que o mar não tem barreiras, e ninguém deveria ter.
+                Inspirada em uma tradição ancestral, a Canoagem Polinési (ou Va'a, em sua nomenclatura original) nasceu há milhares de anos nas ilhas do Pacífico, como meio de transporte, subsistência e conexão entre povos. Hoje, o Va'a se transformou em uma prática esportiva que une técnica, trabalho em equipe e respeito à natureza, valores que se alinham perfeitamente ao nosso propósito.
+
               </p>
             </div>
           </div>
@@ -38,7 +39,7 @@ export function About() {
               </div>
               <div>
                 <h3 className={styles.valueTitle}>Acolhimento</h3>
-                <p className={styles.valueDescription}>Cada pessoa é recebida com dignidade e respeito, sem barreiras.</p>
+                <p className={styles.valueDescription}>Ficamos muito felizes ao receber cada um de vocês, e com cuidado e atenção identificamos a necessidade de cada pessoa.</p>
               </div>
             </div>
             
@@ -47,8 +48,8 @@ export function About() {
                 <Users aria-hidden="true" size={24} className="text-white" />
               </div>
               <div>
-                <h3 className={styles.valueTitle}>Inclusão</h3>
-                <p className={styles.valueDescription}>Promovemos a participação plena de pessoas com diferentes deficiências.</p>
+                <h3 className={styles.valueTitle}>Acessibilidade</h3>
+                <p className={styles.valueDescription}>Através da canoa, eliminamos barreiras e promovemos acessibilidade ao esporte praticado no mar.</p>
               </div>
             </div>
             
@@ -58,7 +59,7 @@ export function About() {
               </div>
               <div>
                 <h3 className={styles.valueTitle}>Movimento</h3>
-                <p className={styles.valueDescription}>A canoa havaiana como veículo de liberdade, superação e alegria.</p>
+                <p className={styles.valueDescription}>No balanço do mar, a canoa promove liberdade e estimula a autoconfiança.</p>
               </div>
             </div>
           </div>
@@ -67,15 +68,15 @@ export function About() {
         <div className={styles.institutionalList}>
           <div className={styles.institutionalCard}>
             <h4 className={styles.infoTitle}>MISSÃO</h4>
-            <p className={styles.infoText}>Promover inclusão e bem-estar de PCDs através da canoa havaiana.</p>
+            <p className={styles.infoText}>Tornar a canoagem polinésia adaptada, uma ferramenta de transformação social, desenvolvimento pessoal e fortalecimento da autoestima desinstitucionalizando a pessoa com deficiência, além de oferecer momentos de lazer para toda a família.</p>
           </div>
           <div className={styles.institutionalCard}>
             <h4 className={styles.infoTitle}>VISÃO</h4>
-            <p className={styles.infoText}>Um Brasil onde pessoas com deficiência vivem e praticam esporte sem barreiras.</p>
+            <p className={styles.infoText}>Uma sociedade que normal é ser.</p>
           </div>
           <div className={styles.institutionalCard}>
             <h4 className={styles.infoTitle}>VALORES</h4>
-            <p className={styles.infoText}>Respeito, acolhimento, inclusão, superação e comunidade.</p>
+            <p className={styles.infoText}>Alegria de conviver em comunidade, esporte adaptado acessível, independência e autonomia para todas as pessoas.</p>
           </div>
         </div>
       </div>

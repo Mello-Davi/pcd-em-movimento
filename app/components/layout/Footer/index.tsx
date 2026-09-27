@@ -13,7 +13,7 @@ export function Footer() {
               <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-10 w-auto" />
             </Link>
             <p className={styles.description}>
-              Promovendo inclusão, mobilidade e integração social de pessoas com deficiência por meio da prática da canoa havaiana adaptada.
+              Promovendo acessibilidade ao esporte praticado no mar por pessoas com deficiência por meio da canoa polinésia.
             </p>
             <div className={styles.socials}>
               <a href="#" aria-label="Instagram" className={styles.socialIcon}>

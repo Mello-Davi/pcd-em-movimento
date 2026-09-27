@@ -19,7 +19,7 @@ export function Project() {
         />
         
         <p className={styles.subtitle}>
-          A canoa havaiana adaptada é praticada em grupos de até 6 pessoas, com instrutores certificados e voluntários treinados para apoiar cada tipo de deficiência com segurança e respeito.
+          A canoa polinésia adaptada é praticada em grupos de até 6 pessoas, com instrutores certificados e voluntários treinados para apoiar cada tipo de deficiência com segurança e acolhimento.
         </p>
 
         <div className={styles.disabilitiesList}>
