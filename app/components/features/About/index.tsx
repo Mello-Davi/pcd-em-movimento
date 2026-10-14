@@ -72,7 +72,7 @@ export function About() {
           </div>
           <div className={styles.institutionalCard}>
             <h4 className={styles.infoTitle}>VISÃO</h4>
-            <p className={styles.infoText}>Uma sociedade que normal é ser.</p>
+            <p className={styles.infoText}>Uma sociedade que afasta-se da ideia de que apenas os corpos normativos são saudáveis e adequados, e que aceita os corpos reais como capazes de fazer e ocupar.</p>
           </div>
           <div className={styles.institutionalCard}>
             <h4 className={styles.infoTitle}>VALORES</h4>

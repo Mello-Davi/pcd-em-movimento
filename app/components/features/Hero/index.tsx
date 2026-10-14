@@ -1,7 +1,7 @@
 import React from "react";
 import { LinkButton } from "../../ui/Button";
 import styles from "./styles.module.css";
-import heroImg from "../../../assets/canoaHavaianaMarAberto.png";
+import heroImg from "../../../assets/turmaDoMovimento.jpeg";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 export function Hero() {
@@ -57,8 +57,8 @@ export function Hero() {
             <span className={styles.statLabel}>Transformando vidas</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>14</span>
-            <span className={styles.statLabel}>Tipos de deficiência</span>
+            <span className={styles.statNumber}>Para todos</span>
+            <span className={styles.statLabel}>Atendimento a todas deficiências e comorbididades</span>
           </div>
         </div>
       </div>
