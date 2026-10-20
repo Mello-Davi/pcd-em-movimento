@@ -40,10 +40,10 @@ export function Benefits() {
               loading="lazy"
               placeholder="blur"
             />
-            <div className={styles.quoteOverlay}>
-              <p className={styles.quoteText}>"O mar não tem barreiras."</p>
-              <p className={styles.quoteAuthor}>Equipe PCD em Movimento</p>
-            </div>
+            <figure className={styles.quoteOverlay}>
+              <blockquote className={styles.quoteText}>“O mar não tem barreiras.”</blockquote>
+              <figcaption className={styles.quoteAuthor}>— Equipe PCD em Movimento</figcaption>
+            </figure>
           </div>
         </div>
       </div>

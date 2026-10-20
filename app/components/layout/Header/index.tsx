@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +9,17 @@ import logoImg from "../../../assets/logo.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
 
   const navLinks = [
     { name: "Início", href: "/#inicio" },
@@ -19,7 +30,7 @@ export function Header() {
   ];
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} role="banner">
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink} aria-label="Página inicial do PCD em Movimento">
           <Image
@@ -50,14 +61,15 @@ export function Header() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
-          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-label={isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+          type="button"
         >
           {isMenuOpen ? <X aria-hidden="true" size={28} /> : <Menu aria-hidden="true" size={28} />}
         </button>
       </div>
 
       {isMenuOpen && (
-        <div id="mobile-menu" className={styles.mobileNav}>
+        <div id="mobile-menu" className={styles.mobileNav} role="region" aria-label="Menu móvel">
           <nav aria-label="Navegação mobile">
             <ul className={styles.mobileNavList}>
               {navLinks.map((link) => (

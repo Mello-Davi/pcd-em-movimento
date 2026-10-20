@@ -10,11 +10,12 @@
   justify-content: center;
   gap: 0.5rem;
   font-size: 1rem;
+  min-height: 48px; /* Tamanho mínimo de alvo de toque (WCAG 2.5.8) */
 }
 
-.button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-brand-light), 0 0 0 4px var(--color-brand-green);
+.button:focus-visible {
+  outline: 3px solid #ffcc00;
+  outline-offset: 3px;
 }
 
 .primary {

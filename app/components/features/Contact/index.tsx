@@ -68,7 +68,7 @@ export function Contact() {
                 <div className={styles.channelIcon} aria-hidden="true">
                   <Mail aria-hidden="true" size={20} className="text-brand-dark" />
                 </div>
-                <a href="mailto:contato@pcdemmovimento.org.br" className={styles.channelLink}>
+                <a href="mailto:contato@pcdemmovimento.org.br" className={styles.channelLink} aria-label="Enviar e-mail para contato@pcdemmovimento.org.br">
                   contato@pcdemmovimento.org.br
                 </a>
               </div>
@@ -87,7 +87,7 @@ export function Contact() {
             {status === "success" ? (
               <div className={styles.feedbackSuccess} role="status" aria-live="polite">
                 <CheckCircle size={40} aria-hidden="true" />
-                <p className={styles.feedbackTitle}>Mensagem enviada!</p>
+                <p className={styles.feedbackTitle}>Mensagem enviada com sucesso!</p>
                 <p className={styles.feedbackText}>
                   Recebemos o seu contato e responderemos em breve no e-mail informado.
                 </p>
@@ -95,20 +95,22 @@ export function Contact() {
                   type="button"
                   className={styles.feedbackReset}
                   onClick={() => setStatus("idle")}
+                  aria-label="Enviar outra mensagem pelo formulário"
                 >
                   Enviar outra mensagem
                 </button>
               </div>
             ) : (
-              <form className={styles.form} onSubmit={handleSubmit} noValidate>
+              <form className={styles.form} onSubmit={handleSubmit} noValidate aria-label="Formulário de contato">
                 <div className={styles.inputGroup}>
                   <label className={styles.inputLabel} htmlFor={nameId}>Nome completo *</label>
                   <input
                     id={nameId}
                     name="name"
                     type="text"
+                    autoComplete="name"
                     className={styles.input}
-                    placeholder="Seu nome"
+                    placeholder="Seu nome completo"
                     required
                     aria-required="true"
                     disabled={status === "loading"}
@@ -121,6 +123,7 @@ export function Contact() {
                     id={emailId}
                     name="email"
                     type="email"
+                    autoComplete="email"
                     className={styles.input}
                     placeholder="seu@email.com"
                     required
@@ -130,7 +133,7 @@ export function Contact() {
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <label className={styles.inputLabel} htmlFor={interestId}>Assunto *</label>
+                  <label className={styles.inputLabel} htmlFor={interestId}>Assunto de interesse *</label>
                   <select
                     id={interestId}
                     name="interest"
@@ -141,10 +144,10 @@ export function Contact() {
                     defaultValue=""
                   >
                     <option value="" disabled>Selecione um assunto</option>
-                    <option value="participar">Quero participar</option>
-                    <option value="voluntario">Quero ser voluntário(a)</option>
+                    <option value="participar">Quero participar como pessoa com deficiência</option>
+                    <option value="voluntario">Quero ser voluntário(a) do projeto</option>
                     <option value="apoiar">Quero apoiar o projeto</option>
-                    <option value="duvida">Tenho uma dúvida</option>
+                    <option value="duvida">Tenho uma dúvida geral</option>
                   </select>
                 </div>
 
@@ -174,6 +177,7 @@ export function Contact() {
                   variant="primary"
                   fullWidth
                   disabled={status === "loading"}
+                  aria-label={status === "loading" ? "Enviando mensagem, aguarde" : "Enviar Mensagem de Contato"}
                 >
                   {status === "loading" ? (
                     <>

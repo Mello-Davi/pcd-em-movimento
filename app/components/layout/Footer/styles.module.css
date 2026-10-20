@@ -118,3 +118,17 @@
   line-height: 1.625;
   margin: 0;
 }
+
+.bottomBar {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.5;
+}

@@ -160,6 +160,9 @@ export default function RootLayout({
         <a href="#conteudo-principal" className="skip-link">
           Pular para o conteúdo principal
         </a>
+        <a href="#contato" className="skip-link">
+          Pular para o formulário de contato
+        </a>
         <Header />
         <main id="conteudo-principal" className="flex-1" tabIndex={-1}>
           {children}

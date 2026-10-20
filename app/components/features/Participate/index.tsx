@@ -16,11 +16,11 @@ export function Participate() {
         <div className={styles.rolesList}>
           {/* Participante */}
           <div className={`${styles.roleCard} ${styles.roleCardParticipant}`}>
-            <div className="mb-6 text-3xl">🛶</div>
+            <div className="mb-6 text-3xl" aria-hidden="true">🛶</div>
             <p className={styles.roleCategory}>PESSOA COM DEFICIÊNCIA</p>
             <h3 className={styles.roleName}>Participante</h3>
             <p className={styles.roleDescription}>
-              Venha remar! O projeto é gratuito para pessoas com deficiência. Basta se inscrever, passar pela avaliação inicial e aparecer no sábado.
+              Venha remar! O projeto é gratuito para pessoas com deficiência. Basta se inscrever, passar pela avaliação inicial e comparecer no dia agendado.
             </p>
             <ul className={styles.benefitsList}>
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Gratuito para PCDs</li>
@@ -29,13 +29,13 @@ export function Participate() {
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Sem experiência prévia</li>
             </ul>
             <div className="mt-auto pt-8">
-              <LinkButton href="/#contato" variant="outline" fullWidth>Quero Participar</LinkButton>
+              <LinkButton href="/#contato" variant="outline" fullWidth aria-label="Quero participar como pessoa com deficiência">Quero Participar</LinkButton>
             </div>
           </div>
 
           {/* Voluntário */}
           <div className={`${styles.roleCard} ${styles.roleCardVolunteer}`}>
-            <div className="mb-6 text-3xl">🤝</div>
+            <div className="mb-6 text-3xl" aria-hidden="true">🤝</div>
             <p className={styles.roleCategory}>APOIE O PROJETO</p>
             <h3 className={styles.roleName}>Voluntário</h3>
             <p className={styles.roleDescription}>
@@ -48,13 +48,13 @@ export function Participate() {
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-green-300 shrink-0" /> Comunidade incrível</li>
             </ul>
             <div className="mt-auto pt-8">
-              <LinkButton href="/#contato" variant="outline" fullWidth>Ser Voluntário</LinkButton>
+              <LinkButton href="/#contato" variant="outline" fullWidth aria-label="Quero me inscrever como voluntário do projeto">Ser Voluntário</LinkButton>
             </div>
           </div>
 
           {/* Apoiador */}
           <div className={`${styles.roleCard} ${styles.roleCardSupporter}`}>
-            <div className="mb-6 text-3xl">💚</div>
+            <div className="mb-6 text-3xl" aria-hidden="true">💚</div>
             <p className={styles.roleCategory}>EMPRESA OU PESSOA</p>
             <h3 className={styles.roleName}>Apoiador</h3>
             <p className={styles.roleDescription}>
@@ -67,7 +67,7 @@ export function Participate() {
               <li><CheckCircle2 aria-hidden="true" size={18} className="text-blue-300 shrink-0" /> Dedução fiscal (MEI/PJ)</li>
             </ul>
             <div className="mt-auto pt-8">
-              <LinkButton href="/#contato" variant="outline" fullWidth>Apoiar o Projeto</LinkButton>
+              <LinkButton href="/#contato" variant="outline" fullWidth aria-label="Quero apoiar financeiramente o projeto PCD em Movimento">Apoiar o Projeto</LinkButton>
             </div>
           </div>
         </div>

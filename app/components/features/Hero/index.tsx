@@ -46,15 +46,15 @@ export function Hero() {
           
           <div className={styles.actions}>
             <div className={styles.linkWrapper}>
-              <LinkButton href="/#projeto" variant="secondary" fullWidth aria-label="Role a página para conhecer o projeto">Conheça o Projeto</LinkButton>
+              <LinkButton href="/#projeto" variant="secondary" fullWidth aria-label="Conheça o Projeto PCD em Movimento">Conheça o Projeto</LinkButton>
             </div>
             <div className={styles.linkWrapper}>
-              <LinkButton href="/#seja-voluntario" variant="success" fullWidth aria-label="Role a página para se inscrever como voluntário">Seja Voluntário</LinkButton>
+              <LinkButton href="/#seja-voluntario" variant="success" fullWidth aria-label="Inscreva-se como voluntário do projeto">Seja Voluntário</LinkButton>
             </div>
           </div>
         </div>
 
-        <div className={styles.statsContainer} aria-label="Estatísticas do projeto">
+        <div className={styles.statsContainer} aria-label="Estatísticas de impacto do projeto" role="region">
           <div className={styles.statItem}>
             <span className={styles.statNumber}>+2000</span>
             <span className={styles.statLabel}>Participantes atendidos</span>

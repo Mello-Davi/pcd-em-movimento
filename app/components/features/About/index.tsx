@@ -23,11 +23,10 @@ export function About() {
             
             <div className={styles.prose}>
               <p>
-                A <strong>Associação PCD em Movimento</strong> é uma organização sem fins lucrativos fundada oficialmente em 2025. Nossa história, no entanto, começou muito antes dessa data, nas iniciativas de um grupo apaixonado por esporte e movido pelo dial de um mundo igualiátio.
+                A <strong>Associação PCD em Movimento</strong> é uma organização sem fins lucrativos fundada oficialmente em 2025. Nossa história, no entanto, começou muito antes dessa data, nas iniciativas de um grupo apaixonado por esporte e movido pelo ideal de um mundo igualitário.
               </p>
               <p>
-                Inspirada em uma tradição ancestral, a Canoagem Polinési (ou Va'a, em sua nomenclatura original) nasceu há milhares de anos nas ilhas do Pacífico, como meio de transporte, subsistência e conexão entre povos. Hoje, o Va'a se transformou em uma prática esportiva que une técnica, trabalho em equipe e respeito à natureza, valores que se alinham perfeitamente ao nosso propósito.
-
+                Inspirada em uma tradição ancestral, a Canoagem Polinésia (ou Va'a, em sua nomenclatura original) nasceu há milhares de anos nas ilhas do Pacífico, como meio de transporte, subsistência e conexão entre povos. Hoje, o Va'a se transformou em uma prática esportiva que une técnica, trabalho em equipe e respeito à natureza, valores que se alinham perfeitamente ao nosso propósito.
               </p>
             </div>
           </div>
@@ -67,15 +66,15 @@ export function About() {
 
         <div className={styles.institutionalList}>
           <div className={styles.institutionalCard}>
-            <h4 className={styles.infoTitle}>MISSÃO</h4>
-            <p className={styles.infoText}>Tornar a canoagem polinésia adaptada, uma ferramenta de transformação social, desenvolvimento pessoal e fortalecimento da autoestima desinstitucionalizando a pessoa com deficiência, além de oferecer momentos de lazer para toda a família.</p>
+            <h3 className={styles.infoTitle}>MISSÃO</h3>
+            <p className={styles.infoText}>Tornar a canoagem polinésia adaptada uma ferramenta de transformação social, desenvolvimento pessoal e fortalecimento da autoestima, desinstitucionalizando a pessoa com deficiência, além de oferecer momentos de lazer para toda a família.</p>
           </div>
           <div className={styles.institutionalCard}>
-            <h4 className={styles.infoTitle}>VISÃO</h4>
+            <h3 className={styles.infoTitle}>VISÃO</h3>
             <p className={styles.infoText}>Uma sociedade que afasta-se da ideia de que apenas os corpos normativos são saudáveis e adequados, e que aceita os corpos reais como capazes de fazer e ocupar.</p>
           </div>
           <div className={styles.institutionalCard}>
-            <h4 className={styles.infoTitle}>VALORES</h4>
+            <h3 className={styles.infoTitle}>VALORES</h3>
             <p className={styles.infoText}>Alegria de conviver em comunidade, esporte adaptado acessível, independência e autonomia para todas as pessoas.</p>
           </div>
         </div>

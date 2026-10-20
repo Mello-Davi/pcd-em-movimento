@@ -3,6 +3,7 @@
 :root {
   --color-brand-dark: #122132;
   --color-brand-green: #2da557;
+  --color-brand-green-accessible: #176532; /* WCAG AA 4.5:1+ sobre fundos claros */
   --color-brand-light: #f0f6fc;
 }
 
@@ -10,13 +11,15 @@ html,
 body {
   background-color: #ffffff;
   color: #1f2937;
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Base heading styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-serif), Georgia, Cambria, serif;
   color: var(--color-brand-dark);
 }
 
@@ -41,34 +44,64 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Accessibility Focus States */
+/* Accessibility Focus States - Alto contraste (WCAG 2.4.7) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+summary:focus-visible {
   outline: 3px solid #ffcc00;
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-/* Skip Link for Keyboard Navigation */
+/* High Contrast Mode support (Windows / Assistive Tech) */
+@media (forced-colors: active) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 3px solid Highlight;
+    outline-offset: 3px;
+  }
+}
+
+/* Skip Link for Keyboard Navigation (WCAG 2.4.1) */
 .skip-link {
   position: absolute;
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
   background: #ffcc00;
-  color: #000;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 700;
   padding: 12px 24px;
   z-index: 9999;
   border-radius: 0 0 8px 8px;
   transition: top 0.2s ease-in-out;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .skip-link:focus-visible {
   top: 0;
-  outline: none;
+  outline: 3px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Screen reader only utility (WCAG 1.3.1, 4.1.2) */
+.srOnly {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
