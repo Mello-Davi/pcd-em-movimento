@@ -78,17 +78,28 @@
 
 .videoWrapper {
   width: 100%;
-  max-width: 720px;
+  max-width: 280px;
   margin: 0 auto 4rem;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  /* Reserva o espaço antes do vídeo carregar, evitando layout shift (CLS) */
+  aspect-ratio: 9 / 16;
+  background-color: #000;
 }
 
 .video {
   width: 100%;
+  height: 100%;
   display: block;
-  background-color: #000;
+  object-fit: cover;
+}
+
+/* Em telas maiores, o vídeo pode crescer um pouco mas mantém o formato portrait */
+@media (min-width: 768px) {
+  .videoWrapper {
+    max-width: 320px;
+  }
 }
 
 .authorInfo {

@@ -1,6 +1,7 @@
 import { Section } from "../../ui/Section";
 import { SectionTitle } from "../../ui/SectionTitle";
 import { Star } from "lucide-react";
+import { useEffect, useRef } from "react";
 import testimonialVideo from "../../../assets/IMG_7452.MOV";
 import styles from "./styles.module.css";
 
@@ -23,6 +24,38 @@ const testimonials = [
 ];
 
 export function Testimonials() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    /* Respeita preferência de movimento reduzido */
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {
+              /* Autoplay bloqueado pelo browser — o usuário pode iniciar manualmente */
+            });
+          } else {
+            video.pause();
+          }
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(video);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Section id="depoimentos" theme="dark">
       <div className={styles.container}>
@@ -36,9 +69,15 @@ export function Testimonials() {
 
         <div className={styles.videoWrapper}>
           <video
+            ref={videoRef}
             className={styles.video}
             controls
             playsInline
+            muted
+            loop
+            preload="metadata"
+            width="480"
+            height="854"
             aria-label="Depoimento em vídeo de participantes do PCD em Movimento"
           >
             <source src={testimonialVideo} type="video/mp4" />
