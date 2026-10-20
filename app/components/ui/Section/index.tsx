@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./styles.module.css";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
@@ -17,7 +19,7 @@ export function Section({ id, theme = "white", className = "", children, animate
     <section 
       id={id} 
       className={`${styles.section} ${styles[theme]} ${className}`}
-      aria-label={id ? id.replace('-', ' ') : undefined}
+      aria-label={id ? id.replace("-", " ") : undefined}
     >
       <div 
         ref={ref as React.RefObject<HTMLDivElement>} 

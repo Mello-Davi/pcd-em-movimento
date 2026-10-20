@@ -1,28 +1,22 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
 :root {
   --color-brand-dark: #122132;
   --color-brand-green: #2da557;
   --color-brand-light: #f0f6fc;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Fraunces", ui-serif, Georgia, Cambria, serif;
 }
 
 html,
 body {
-  @apply bg-white text-gray-800;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-family: var(--font-sans), system-ui, sans-serif;
   scroll-behavior: smooth;
 }
 
 /* Base heading styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif), Georgia, serif;
   color: var(--color-brand-dark);
 }
 
@@ -47,11 +41,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
 /* Accessibility Focus States */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
+select:focus-visible,
 textarea:focus-visible {
   outline: 3px solid #ffcc00;
   outline-offset: 3px;

@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import Image from "next/image";
 import { LinkButton } from "../../ui/Button";
 import styles from "./styles.module.css";
 import heroImg from "../../../assets/turmaDoMovimento.jpeg";
@@ -10,10 +13,14 @@ export function Hero() {
   return (
     <section id="inicio" className={styles.section} aria-label="Início">
       <div className={styles.backgroundWrapper}>
-        <img
+        <Image
           src={heroImg}
           alt="Grupo de pessoas sorrindo e praticando canoa havaiana adaptada no mar aberto ao entardecer"
+          fill
+          priority
+          sizes="100vw"
           className={styles.backgroundImage}
+          placeholder="blur"
         />
         <div className={styles.backgroundOverlay} />
       </div>
@@ -25,7 +32,7 @@ export function Hero() {
         <div className={styles.content}>
           <div className={styles.tag}>
             <span className={styles.tagIcon} aria-hidden="true">≈</span>
-            Esteporte Adaptado • Acessibilidade • Canoa Polinésia •  Inclusão Social
+            Esporte Adaptado • Acessibilidade • Canoa Polinésia • Inclusão Social
           </div>
           
           <h1 className={styles.title}>
@@ -34,7 +41,7 @@ export function Hero() {
           </h1>
           
           <p className={styles.subtitle}>
-            O projeto PCD em Movimento leva pessoas com qualquer deficiência ou dificuldade e sua família para remar na canoa polinésia, contruindo pontes e fortalecendo as conexões entre pessoas.
+            O projeto PCD em Movimento leva pessoas com qualquer deficiência ou dificuldade e sua família para remar na canoa polinésia, construindo pontes e fortalecendo as conexões entre pessoas.
           </p>
           
           <div className={styles.actions}>
@@ -58,7 +65,7 @@ export function Hero() {
           </div>
           <div className={styles.statItem}>
             <span className={styles.statNumber}>Para todos</span>
-            <span className={styles.statLabel}>Atendimento a todas deficiências e comorbididades</span>
+            <span className={styles.statLabel}>Atendimento a todas deficiências e comorbidades</span>
           </div>
         </div>
       </div>

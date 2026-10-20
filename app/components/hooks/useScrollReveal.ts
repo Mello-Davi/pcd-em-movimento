@@ -5,11 +5,10 @@ export function useScrollReveal(threshold = 0.1) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Para acessibilidade: verificar se o usuário prefere sem animação
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      setIsVisible(true);
-      return;
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mediaQuery.matches) {
+      const raf = requestAnimationFrame(() => setIsVisible(true));
+      return () => cancelAnimationFrame(raf);
     }
 
     const observer = new IntersectionObserver(
@@ -34,6 +33,7 @@ export function useScrollReveal(threshold = 0.1) {
       if (currentRef) {
         observer.unobserve(currentRef);
       }
+      observer.disconnect();
     };
   }, [threshold]);
 

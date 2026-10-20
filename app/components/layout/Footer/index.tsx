@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+import Link from "next/link";
+import Image from "next/image";
 import styles from "./styles.module.css";
 import logoImg from "../../../assets/logo.png";
 import { LinkButton } from "../../ui/Button";
@@ -9,8 +10,14 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.footerLayout}>
           <div className={styles.brandCol}>
-            <Link to="/" className={styles.logoLink}>
-              <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-10 w-auto" />
+            <Link href="/" className={styles.logoLink} aria-label="Página inicial do PCD em Movimento">
+              <Image
+                src={logoImg}
+                alt="Logotipo PCD em Movimento"
+                height={40}
+                width={120}
+                style={{ height: "2.5rem", width: "auto" }}
+              />
             </Link>
             <p className={styles.description}>
               Promovendo acessibilidade ao esporte praticado no mar por pessoas com deficiência por meio da canoa polinésia.

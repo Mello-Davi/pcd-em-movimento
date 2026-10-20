@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Section } from "../../ui/Section";
 import { CheckCircle2 } from "lucide-react";
 import styles from "./styles.module.css";
@@ -30,7 +31,15 @@ export function Benefits() {
           </div>
           
           <div className={styles.mediaWrapper}>
-            <img src={canoaImg} alt="Canoa havaiana adaptada navegando no mar aberto com participantes remando" className={styles.mediaImage} />
+            <Image
+              src={canoaImg}
+              alt="Canoa havaiana adaptada navegando no mar aberto com participantes remando"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className={styles.mediaImage}
+              loading="lazy"
+              placeholder="blur"
+            />
             <div className={styles.quoteOverlay}>
               <p className={styles.quoteText}>"O mar não tem barreiras."</p>
               <p className={styles.quoteAuthor}>Equipe PCD em Movimento</p>

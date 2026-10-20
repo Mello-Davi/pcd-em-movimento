@@ -1,6 +1,9 @@
+"use client";
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router";
+import Link from "next/link";
+import Image from "next/image";
 import styles from "./styles.module.css";
 import logoImg from "../../../assets/logo.png";
 
@@ -18,8 +21,15 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link to="/" className={styles.logoLink} aria-label="Página inicial do PCD em Movimento">
-          <img src={logoImg} alt="Logotipo PCD em Movimento" className="h-10 w-auto" />
+        <Link href="/" className={styles.logoLink} aria-label="Página inicial do PCD em Movimento">
+          <Image
+            src={logoImg}
+            alt="Logotipo PCD em Movimento"
+            height={40}
+            width={120}
+            priority
+            style={{ height: "2.5rem", width: "auto" }}
+          />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Navegação principal">

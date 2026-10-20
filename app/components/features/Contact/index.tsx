@@ -1,3 +1,5 @@
+"use client";
+
 import { Section } from "../../ui/Section";
 import { Mail, MapPin, CheckCircle, AlertCircle, Loader } from "lucide-react";
 import styles from "./styles.module.css";

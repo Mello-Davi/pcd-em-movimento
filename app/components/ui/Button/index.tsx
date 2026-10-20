@@ -1,6 +1,6 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./styles.module.css";
-import { Link } from "react-router";
 
 type ButtonVariant = "primary" | "secondary" | "success" | "outline" | "white";
 
@@ -35,20 +35,20 @@ export const LinkButton = React.forwardRef<HTMLAnchorElement, LinkButtonProps>(
     const isInternal = href.startsWith("/") || href.startsWith("#");
     const linkProps = {
       className: `${styles.button} ${styles[variant]} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`,
-      style: { textDecoration: 'none' },
-      ...props
+      style: { textDecoration: "none" },
+      ...props,
     };
 
-    if (isInternal && href.startsWith("/")) {
+    if (isInternal) {
       return (
-        <Link ref={ref as any} to={href} {...linkProps}>
+        <Link ref={ref} href={href} {...linkProps}>
           {children}
         </Link>
       );
     }
 
     return (
-      <a ref={ref as any} href={href} {...linkProps}>
+      <a ref={ref} href={href} {...linkProps}>
         {children}
       </a>
     );

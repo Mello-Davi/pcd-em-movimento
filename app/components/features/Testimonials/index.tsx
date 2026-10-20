@@ -1,8 +1,9 @@
+"use client";
+
 import { Section } from "../../ui/Section";
 import { SectionTitle } from "../../ui/SectionTitle";
 import { Star } from "lucide-react";
 import { useEffect, useRef } from "react";
-import testimonialVideo from "../../../assets/IMG_7452.MOV";
 import styles from "./styles.module.css";
 
 const testimonials = [
@@ -80,7 +81,7 @@ export function Testimonials() {
             height="854"
             aria-label="Depoimento em vídeo de participantes do PCD em Movimento"
           >
-            <source src={testimonialVideo} type="video/mp4" />
+            <source src="/assets/depoimento.mp4" type="video/mp4" />
             Seu navegador não suporta a reprodução de vídeo.
           </video>
         </div>

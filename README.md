@@ -8,37 +8,53 @@ Este repositório contém o código-fonte do website institucional da organizaç
 
 ## Visão Geral do Projeto
 
-A aplicação foi desenvolvida como uma Landing Page moderna, focada em performance, acessibilidade universal (WCAG) e arquitetura de software de alta manutenção.
+A aplicação foi desenvolvida como uma Landing Page moderna, focada em performance máxima, SEO avançado, acessibilidade universal (WCAG) e arquitetura limpa (Clean Architecture).
 
 ### Principais Funcionalidades e Acessibilidade (a11y)
 - Suporte integral à navegação via teclado (Skip Links e outlines de alto contraste).
-- Otimização para leitores de tela com textos alternativos detalhados, atributos ARIA dinâmicos e isolamento de elementos puramente decorativos.
+- Otimização para leitores de tela com textos alternativos detalhados, atributos ARIA dinâmicos e isolamento de elementos decorativos.
 - Comportamentos visuais adaptativos que respeitam as preferências do usuário (ex: desativação de animações via `prefers-reduced-motion`).
-- Componentes interativos nativos e leves, como carrosséis construídos com CSS Scroll Snap, eliminando dependências externas pesadas.
+- Player de vídeo de depoimento em alta performance com carregamento lazy e reprodução inteligente via `IntersectionObserver`.
+- Componentes leves como carrosséis construídos com CSS Scroll Snap, eliminando bibliotecas pesadas de terceiros.
+
+### Otimizações de SEO & Core Web Vitals
+- **Next.js App Router**: Pré-renderização estática de alta velocidade.
+- **Next Image**: Formatos de última geração (AVIF/WebP automáticos), dimensionamento anti-CLS e `priority` na imagem do Hero para otimizar o LCP (Largest Contentful Paint).
+- **Next Font**: Fontes Google (`Inter` e `Fraunces`) auto-hospedadas e injetadas sem FOIT/FOUT ou layout shifts.
+- **Metadata API Completa**: Tags OpenGraph, Twitter Cards, canonical URL, robots e viewport.
+- **Dados Estruturados (JSON-LD)**: Schema.org para Organização Não Governamental (`NGO`) e Clube Esportivo (`SportsClub`).
+- **Arquivos Nativos de Busca**: `sitemap.xml`, `robots.txt` e Web App Manifest (`manifest.webmanifest`).
 
 ## Tecnologias e Ferramentas
 
-O projeto utiliza tecnologias modernas de ecossistema React, restringindo ferramentas de terceiros sempre que as alternativas nativas são mais performáticas e escaláveis:
+O projeto utiliza o ecossistema moderno de Next.js + React com estrita separação em Clean Architecture:
 
-- React 19
-- React Router v8 (Configurado via Vite)
-- TypeScript (Strict mode habilitado)
-- CSS Modules (Vanilla CSS Puro)
-- Node.js & PNPM
+- **Next.js 16 (App Router)**
+- **React 19**
+- **TypeScript** (Strict mode)
+- **CSS Modules** (Vanilla CSS Puro)
+- **Tailwind CSS v4** (Variáveis globais de tema)
+- **ESLint & TypeScript-ESLint**
+- **Node.js & PNPM**
+
+## Arquitetura Limpa (Clean Architecture)
+
+- `app/core/`: Entidades de domínio puras, use-cases e interfaces de repositórios.
+- `app/infrastructure/`: Implementações concretas de repositórios (ex: envio de mensagens).
+- `app/components/`: Camada de UI dividida estritamente em:
+  - `ui/`: Componentes atômicos e reutilizáveis (`Button`, `Section`, `SectionTitle`).
+  - `layout/`: Componentes estruturais fixos (`Header`, `Footer`).
+  - `features/`: Funcionalidades de negócio (`Hero`, `About`, `Project`, `Benefits`, `Location`, `Testimonials`, `Participate`, `Contact`).
 
 ## Diretrizes de Codificação e Estilos
 
-Este projeto aboliu o uso de strings utilitárias do Tailwind CSS na camada de componentes para garantir a previsibilidade e a leitura nativa do código.
-
 1. **CSS Modules Restritos:**
-   Todo componente React deve ter seu próprio arquivo `styles.module.css`. O uso da diretiva `@apply` do Tailwind é terminantemente proibido.
-2. **Nomenclatura Semântica (BEM-like):**
-   Os seletores de classe devem refletir diretamente o propósito ou domínio do conteúdo (ex: `.valueCardAcolhimento`, `.disabilityTitle`), rejeitando nomes focados em estilo (ex: `.cardDark`, `.textBlue`).
-3. **Isolamento do Componente:**
-   Todo componente obrigatoriamente segue a árvore: `PastaDoComponente/index.tsx` e `PastaDoComponente/styles.module.css`.
+   Todo componente React possui seu arquivo `styles.module.css`. O uso da diretiva `@apply` é proibido nos módulos.
+2. **Nomenclatura Semântica:**
+   Seletores de classe refletem o propósito do conteúdo, evitando classes utilitárias ou baseadas apenas em visual.
+3. **Isolamento de Componentes:**
+   Estrutura estrita: `NomeDoComponente/index.tsx` e `NomeDoComponente/styles.module.css`.
 
 ## Créditos
 
 Desenvolvido por **Davi Rodrigues** (GitHub: [Mello-Davi](https://github.com/Mello-Davi)).
-
-*Powered by AI*

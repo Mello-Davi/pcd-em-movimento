@@ -1,7 +1,22 @@
-.DS_Store
-.env
+# Dependencies
 /node_modules/
+/.pnpm-store/
 
-# React Router
-/.react-router/
+# Next.js
+/.next/
+/out/
 /build/
+
+# Environment
+.env
+.env*.local
+
+# OS
+.DS_Store
+*.pem
+
+# TypeScript
+*.tsbuildinfo
+
+# Vercel
+.vercel
